@@ -28,6 +28,6 @@ author:
 rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
-url: http://nlhuykhang.github.io
+url: http://nlhuykhang.github.io/
 
 BASE_PATH:
