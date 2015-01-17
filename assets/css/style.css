@@ -8,7 +8,7 @@ body{
 	position: fixed;
 	top: 0px;
 	padding-top: 10%;
-	background-color: black;
+	background-color: #120B12;
 	color: #fff;
 }
 
@@ -82,7 +82,7 @@ article .share .gplus:hover {
 }
 
 .page-header {
-	color: #e74c3c;
+	color: #000000;
 	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 }
 
