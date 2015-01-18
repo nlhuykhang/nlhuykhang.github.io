@@ -3,6 +3,7 @@ layout: post
 title: [Tut] Deploy web Nodejs dùng MongoDb với host Openshift
 categories: [general, setup, demo]
 tags: [demo, dbyll, dbtek, setup]
+published: true
 fullview: true
 ---
 
