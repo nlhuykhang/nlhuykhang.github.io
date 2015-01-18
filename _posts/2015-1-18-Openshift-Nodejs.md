@@ -82,3 +82,4 @@ Mỗi lần bạn cần thay đổi về source code của trang web chỉ cần
 
 Vậy là đã xong web của bạn giờ đã được chạy trên cloud Openshift.
 Enjoy it.
+fuck ><
