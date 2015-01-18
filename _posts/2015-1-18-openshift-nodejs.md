@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello World2! Hello Blog2!
+title: [Tut]Hello World2! Hello Blog2!
 categories: [general, setup, demo]
 tags: [demo, dbyll, dbtek, setup]
 fullview: true
