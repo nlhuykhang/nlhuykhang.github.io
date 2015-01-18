@@ -1,7 +1,7 @@
 ---
 layout: post
 title: [Tut] Deploy web Nodejs dùng MongoDb với host Openshift
-categories: [tut, web]
+categories: [general, setup, demo]
 tags: [nodejs, mongodb, tut, openshift]
 fullview: true
 ---
