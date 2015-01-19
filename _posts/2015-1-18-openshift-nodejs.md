@@ -74,7 +74,7 @@ Hoàn thành tạo app<br>
 <h2>Cấu hình</h2>
 Để web của bạn chạy được trên Openshift, có 3 thứ cần phải sửa trong code: **package.json, connection string to databse, server ip và port**
 
-* File package.json<br>
+* **File package.json**<br>
 Trong file này các bạn thêm vào 2 trường như sau:
 {% highlight html linenos %}
 ...
@@ -86,7 +86,7 @@ Trong file này các bạn thêm vào 2 trường như sau:
 {% endhighlight %}
 Việc làm này mục đích là để Openshift biết đâu là file server của bạn để khởi chạy đầu tiên và build web của bạn trên cloud
 
-* Connection string to database<br>
+* **Connection string to database**<br>
 Phần này ta thay đổi connection string để kết nối tới cơ sở dữ liệu MongoDb trên cloud. Trong ví dụ dưới đây mình dùng module **Mongoose**, bạn nào cũng dùng thì chỉ cần copy là có thể chạy được. 
 
 {% highlight html linenos %}
@@ -102,7 +102,7 @@ mongoose.connect(mongodb_connection_string);
 
 Đối với các module khác(mongojs, mongod) thì sẽ khác tí chút vì có thể không dùng connection string, mà truyền các tham số như Ip, port, trường hợp đó thì các bạn cứ truyền thẳng các tham số vào nhé.
 
-* Server IP, server Port<br>
+* **Server IP, server Port**<br>
 Cuối cùng thay đổi port và ip server để phù hợp với cloud Openshift. 
 
 {% highlight html linenos %}
