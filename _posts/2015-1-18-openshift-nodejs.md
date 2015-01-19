@@ -9,6 +9,7 @@ fullview: true
 Tháng trước để thỏa mãn giáo viên lý thuyết mình phải vật vã cả ngày để up một trang web dùng Nodejs và MongoDb lên Openshift. Nay có lòng tốt muốn giúp các bạn tiết kiệm được một ngày nên sẽ làm tut hướng dẫn chi tiết cách làm thế nào (và cũng để chính mình nhớ luôn). Ai làm theo mà không được dám chừng ăn ở đừng trách mình nhé :3.
 
 Tut gồm có 3 phần chính: <br>
+
 * Cài đặt mọi thứ râu ria cần thiết <br>
 * Tạo app trên cloud <br>
 * Cấu hình trang web để chạy được trên host và deploy<br>
@@ -17,6 +18,7 @@ Các bạn cần gì thì xem đó không cần phải step-by-step <br>
 
 <h1>I. Phần cài đặt</h1>
 Để up được host Openshift cơ bản chúng ta bắt buộc có các thứ sau đây:<br>
+
 * Tài khoản Openshift (hiển nhiên rồi), này tự đăng kí nhé.<br>
 * Openshift client tools, cái này mình sẽ hướng dẫn gồm có tất cả 3 bước<br>
 
@@ -50,8 +52,9 @@ C:\> gem install rhc<br>
 <h1>II. Phần tạo app trên cloud</h1>
 Phần này có 2 cách làm một là tạo bằng command line hai là tạo trực tiếp trên web của Openshift, mình không biết dùng command line(gà ><) nên sẽ hướng dẫn tạo trực tiếp.
 Bước này thực chất rất đơn giản các bạn hoàn toàn có thể tự làm(mình mò đại cũng ra không cần phải xem theo tut :D)<br>
-Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
-Bước 2 -> n: tuần tự theo hình<br>
+
+*Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
+*Bước 2 -> n: tuần tự theo hình<br>
 ![Hình 4]({{ site.url }}/assets/media/4.png)<br>
 <br>
 ![Hình 5]({{ site.url }}/assets/media/5.png)<br>
@@ -66,15 +69,16 @@ Hoàn thành tạo app<br>
 ![Hình 8]({{ site.url }}/assets/media/8.png)<br>
 
 <h1>III. Phần cấu hình và deploy</h1>
-Cấu hình<br>
+<h2>Cấu hình</h2>
 Phần này mình sẽ update sau giờ bận xem đá banh rồi :3<br>
-Deploy<br>
-Bước 1: clone source code của trang web<br>
+<h2>Deploy</h2>
+
+* Bước 1: clone source code của trang web<br>
 Các bạn đăng nhập vào Openshift và ứng dụng của mình và copy đoạn code trong ô **Source Code**, gọi đoạn code này là SOURCECODE<br>
 ![Hình 9]({{ site.url }}/assets/media/9.png)<br>
 Sau đó mở command line, nhập lệnh sau để clone source code của trang web<br>
 C:\> git clone SOURCECODE<br>
-Bước 2: <br>
+* Bước 2: <br>
 Giờ bạn chỉ cần copy tất cả code của trang web bạn vào thư mục vừa clone về được. Sau đó dùng các lệnh sau đây đủ deploy lên server<br>
 git add .<br>
 git commit -m "whatever"<br>
