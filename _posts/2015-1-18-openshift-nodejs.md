@@ -26,7 +26,7 @@ Các bạn cần gì thì xem đó không cần phải step-by-step <br>
 <br>
 ![Hình 1]({{ site.url }}/assets/media/1.png){: style="float:left"}<br>
 
-![Hình 2]({{ site.url }}/assets/media/2.png){: style="float:right"}<br>
+![Hình 2]({{ site.url }}/assets/media/2.png){: style="float:left"}<br>
 <br>
 Giải thích thêm: do client tools của Openshift(và đa số các cloud khác Heroku chẳng hạn) không có hỗ trợ Unicode nên đối với các máy ở Việt Nam dùng Unicode thì chắc chắn bị lỗi không thể cài được(nôm na là thế tại mình cũng không hiểu rỏ :v) <br>
 
