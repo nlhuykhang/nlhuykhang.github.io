@@ -85,7 +85,7 @@ C:\> git clone SOURCECODE
 * **Bước 2:** <br>
 Giờ bạn chỉ cần copy tất cả code của trang web bạn vào thư mục vừa clone về được. Sau đó dùng các lệnh sau đây đủ deploy lên server<br>
 {% highlight ruby %}
-git add
+git add .
 git commit -m "whatever"
 git push
 {% endhighlight %}
@@ -93,5 +93,5 @@ git push
 Mỗi lần bạn cần thay đổi về source code của trang web chỉ cần sửa code ở local, sau đó dùng các lệnh trên đây để push lên server.
 
 Vậy là đã xong web của bạn giờ đã được chạy trên cloud Openshift.
-Enjoy it.
-fuck ><
+
+Log in and enjoy it.
