@@ -53,8 +53,8 @@ C:\> gem install rhc<br>
 Phần này có 2 cách làm một là tạo bằng command line hai là tạo trực tiếp trên web của Openshift, mình không biết dùng command line(gà ><) nên sẽ hướng dẫn tạo trực tiếp.
 Bước này thực chất rất đơn giản các bạn hoàn toàn có thể tự làm(mình mò đại cũng ra không cần phải xem theo tut :D)<br>
 
-*Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
-*Bước 2 -> n: tuần tự theo hình<br>
+* Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
+* Bước 2 -> n: tuần tự theo hình<br>
 ![Hình 4]({{ site.url }}/assets/media/4.png)<br>
 <br>
 ![Hình 5]({{ site.url }}/assets/media/5.png)<br>
