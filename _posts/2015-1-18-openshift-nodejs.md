@@ -24,9 +24,9 @@ Các bạn cần gì thì xem đó không cần phải step-by-step <br>
 
 **Chú ý**: đối với các bạn ở Việt Nam khi làm 3 bước sau đây thường sẽ bị dính lỗi do setting mặc định trong máy Windows, mình không nhớ rỏ bước nào(làm cả tháng rồi :v). Nên để tránh ức chế đầu tiên các bạn vào **Controll Panel -> Region -> Administrative -> Change system locate...** và chọn **English(United States)**, sau đó reset máy(nếu nó yêu cầu)<br>
 <br>
-![Hình 1]({{ site.url }}/assets/media/1.png){: style="float:left"}<br>
+![Hình 1]({{ site.url }}/assets/media/1.png)<br>
 
-![Hình 2]({{ site.url }}/assets/media/2.png){: style="float:left"}<br>
+![Hình 2]({{ site.url }}/assets/media/2.png)<br>
 <br>
 Giải thích thêm: do client tools của Openshift(và đa số các cloud khác Heroku chẳng hạn) không có hỗ trợ Unicode nên đối với các máy ở Việt Nam dùng Unicode thì chắc chắn bị lỗi không thể cài được(nôm na là thế tại mình cũng không hiểu rỏ :v) <br>
 
