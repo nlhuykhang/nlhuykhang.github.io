@@ -15,17 +15,17 @@ Tut gồm có 3 phần chính: <br>
 
 Các bạn cần gì thì xem đó không cần phải step-by-step <br>
 
-I. Phần cài đặt<br>
+**I. Phần cài đặt**<br>
 Để up được host Openshift cơ bản chúng ta bắt buộc có các thứ sau đây:<br>
 + Tài khoản Openshift (hiển nhiên rồi), này tự đăng kí nhé.<br>
 + Openshift client tools, cái này mình sẽ hướng dẫn gồm có tất cả 3 bước<br>
 
-Chú ý: đối với các bạn ở Việt Nam khi làm 3 bước sau đây thường sẽ bị dính lỗi do setting mặc định trong máy Windows, mình không nhớ rỏ bước nào(làm cả tháng rồi :v). Nên để tránh ức chế đầu tiên các bạn vào Controll Panel -> Region -> Administrative -> Change system locate... và chọn English(United States), sau đó reset máy(nếu nó yêu cầu)<br>
-
+**Chú ý**: đối với các bạn ở Việt Nam khi làm 3 bước sau đây thường sẽ bị dính lỗi do setting mặc định trong máy Windows, mình không nhớ rỏ bước nào(làm cả tháng rồi :v). Nên để tránh ức chế đầu tiên các bạn vào **Controll Panel -> Region -> Administrative -> Change system locate...** và chọn **English(United States)**, sau đó reset máy(nếu nó yêu cầu)<br>
+<br>
 ![Hình 1]({{ site.url }}/assets/media/1.png)<br>
 
 ![Hình 2]({{ site.url }}/assets/media/2.png)<br>
-
+<br>
 Giải thích thêm: do client tools của Openshift(và đa số các cloud khác Heroku chẳng hạn) không có hỗ trợ Unicode nên đối với các máy ở Việt Nam dùng Unicode thì chắc chắn bị lỗi không thể cài được(nôm na là thế tại mình cũng không hiểu rỏ :v) <br>
 
 Giờ mình vào phần chính:<br>
@@ -33,6 +33,7 @@ Giờ mình vào phần chính:<br>
 Bước 1: Cài đặt Ruby<br>
 Tải phiên bản mới nhất của <a class="btn btn-default" href="http://rubyinstaller.org/">**RubyInstaller**</a> và cài đặt. 
 Khi cài đặt các bạn nhớ tick chọn **Add Ruby executables to your PATH** để có thể chạy Ruby bằng Command Line.
+<br>
 ![Hình 3]({{ site.url }}/assets/media/3.png)<br>
 
 Bước 2: Cài đặt Git<br>
@@ -46,25 +47,25 @@ C:\> gem install rhc<br>
 
 Đến đây, nếu tất cả thành công chúng ta đã hoàn thành phần cài đặt. 
 
-II. Phần tạo app trên cloud<br>
+**II. Phần tạo app trên cloud**<br>
 Phần này có 2 cách làm một là tạo bằng command line hai là tạo trực tiếp trên web của Openshift, mình không biết dùng command line(gà ><) nên sẽ hướng dẫn tạo trực tiếp.
 Bước này thực chất rất đơn giản các bạn hoàn toàn có thể tự làm(mình mò đại cũng ra không cần phải xem theo tut :D)<br>
-Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a>.
+Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
 Bước 2 -> n: tuần tự theo hình<br>
 ![Hình 4]({{ site.url }}/assets/media/4.png)<br>
-
+<br>
 ![Hình 5]({{ site.url }}/assets/media/5.png)<br>
-
-![Hình 6]({{ site.url }}/assets/media/6.png)<br>
+<br>
+![Hình 6]({{ site.url }}/assets/media/6.png)<br><br>
 Hình này có 2 chỗ cần chú ý: tên web của bạn thì không bàn rồi, còn phần Git URL nếu bạn có up source code mình lên git thì có thể dán link vào đây, không có vẫn ổn vì làm sau cũng được.  
-
+<br>
 ![Hình 7]({{ site.url }}/assets/media/7.png)<br>
 Hoàn thành tạo app<br>
 
-Để tạo cơ sở dữ liệu MongoDb cho trang web các bạn chỉ cần chọn như hình sau đó next next là được.
+Để tạo cơ sở dữ liệu MongoDb cho trang web các bạn chỉ cần chọn như hình sau đó next next là được.<br>
 ![Hình 8]({{ site.url }}/assets/media/8.png)<br>
 
-III. Phần cấu hình và deploy<br>
+**III. Phần cấu hình và deploy**<br>
 Cấu hình<br>
 Phần này mình sẽ update sau giờ bận xem đá banh rồi :3<br>
 Deploy<br>
