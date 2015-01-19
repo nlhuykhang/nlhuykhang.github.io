@@ -15,7 +15,7 @@ Tut gồm có 3 phần chính: <br>
 
 Các bạn cần gì thì xem đó không cần phải step-by-step <br>
 
-<h1>I. Phần cài đặt<h1><br>
+<h1>I. Phần cài đặt</h1>
 Để up được host Openshift cơ bản chúng ta bắt buộc có các thứ sau đây:<br>
 * Tài khoản Openshift (hiển nhiên rồi), này tự đăng kí nhé.<br>
 * Openshift client tools, cái này mình sẽ hướng dẫn gồm có tất cả 3 bước<br>
@@ -47,7 +47,7 @@ C:\> gem install rhc<br>
 
 Đến đây, nếu tất cả thành công chúng ta đã hoàn thành phần cài đặt. 
 
-h1. **II. Phần tạo app trên cloud**<br>
+<h1>II. Phần tạo app trên cloud</h1>
 Phần này có 2 cách làm một là tạo bằng command line hai là tạo trực tiếp trên web của Openshift, mình không biết dùng command line(gà ><) nên sẽ hướng dẫn tạo trực tiếp.
 Bước này thực chất rất đơn giản các bạn hoàn toàn có thể tự làm(mình mò đại cũng ra không cần phải xem theo tut :D)<br>
 Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
@@ -65,7 +65,7 @@ Hoàn thành tạo app<br>
 Để tạo cơ sở dữ liệu MongoDb cho trang web các bạn chỉ cần chọn như hình sau đó next next là được.<br>
 ![Hình 8]({{ site.url }}/assets/media/8.png)<br>
 
-h1. **III. Phần cấu hình và deploy**<br>
+<h1>III. Phần cấu hình và deploy</h1>
 Cấu hình<br>
 Phần này mình sẽ update sau giờ bận xem đá banh rồi :3<br>
 Deploy<br>
