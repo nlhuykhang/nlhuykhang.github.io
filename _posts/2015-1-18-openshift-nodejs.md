@@ -15,7 +15,7 @@ Tut gồm có 3 phần chính: <br>
 
 Các bạn cần gì thì xem đó không cần phải step-by-step <br>
 
-h1. Phần cài đặt
+<h1>I. Phần cài đặt<h1><br>
 Để up được host Openshift cơ bản chúng ta bắt buộc có các thứ sau đây:<br>
 * Tài khoản Openshift (hiển nhiên rồi), này tự đăng kí nhé.<br>
 * Openshift client tools, cái này mình sẽ hướng dẫn gồm có tất cả 3 bước<br>
