@@ -46,9 +46,7 @@ Tick chọn **Run Git from the Windows Command Link Prompt** khi cài.
 * Bước 3: Cài đặt rhc<br>
 Đây chính là client của Openshift, các bạn mở command line và nhập dòng lệnh sau:<br>
 {% highlight ruby %}
-def foo
   C:\> gem install rhc
-end
 {% endhighlight %}
 
 
@@ -82,15 +80,15 @@ Phần này mình sẽ update sau giờ bận xem đá banh rồi :3<br>
 Các bạn đăng nhập vào Openshift và ứng dụng của mình và copy đoạn code trong ô **Source Code**, gọi đoạn code này là SOURCECODE<br>
 ![Hình 9]({{ site.url }}/assets/media/9.png)<br>
 Sau đó mở command line, nhập lệnh sau để clone source code của trang web<br>
-C:\> git clone SOURCECODE<br>
+{% highlight ruby %}
+	C:\> git clone SOURCECODE<br>
+{% endhighlight %}
 * Bước 2: <br>
 Giờ bạn chỉ cần copy tất cả code của trang web bạn vào thư mục vừa clone về được. Sau đó dùng các lệnh sau đây đủ deploy lên server<br>
 {% highlight ruby %}
-def foo
 	git add
 	git commit -m "whatever"
 	git push
-end
 {% endhighlight %}
 
 Mỗi lần bạn cần thay đổi về source code của trang web chỉ cần sửa code ở local, sau đó dùng các lệnh trên đây để push lên server.
