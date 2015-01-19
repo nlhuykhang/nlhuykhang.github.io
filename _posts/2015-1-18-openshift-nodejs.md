@@ -72,7 +72,47 @@ Hoàn thành tạo app<br>
 
 <h1>III. Phần cấu hình và deploy</h1>
 <h2>Cấu hình</h2>
-Phần này mình sẽ update sau giờ bận xem đá banh rồi :3<br>
+Để web của bạn chạy được trên Openshift, có 3 thứ cần phải sửa trong code: **package.json, connection string to databse, server ip và port**
+
+* File package.json
+Trong file này các bạn thêm vào 2 trường như sau:
+{% highlight html linenos %}
+...
+"scripts": {
+    "start": "node app.js"		//app.js là file chạy server của bạn
+},
+"main": "app.js",
+...
+{% endhighlight %}
+Việc làm này mục đích là để Openshift biết đâu là file server của bạn để khởi chạy đầu tiên và build web của bạn trên cloud
+
+* Connection string to database
+Phần này ta thay đổi connection string để kết nối tới cơ sở dữ liệu MongoDb trên cloud. Trong ví dụ dưới đây mình dùng module **Mongoose**, bạn nào cũng dùng thì chỉ cần copy là có thể chạy được. 
+
+{% highlight html linenos %}
+...
+var mongodb_connection_string = 'mongodb://127.0.0.1:27017/' + 'YourWebName';		//nếu chạy local
+//take advantage of openshift env vars when available:
+if(process.env.OPENSHIFT_MONGODB_DB_URL){
+  mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + 'YourWebName';	//nếu chạy trên cloud
+}
+mongoose.connect(mongodb_connection_string);
+...
+{% endhighlight %}
+
+Đối với các module khác(mongojs, mongod) thì sẽ khác tí chút vì có thể không dùng connection string, mà truyền các tham số như Ip, port, trường hợp đó thì các bạn cứ truyền thẳng các tham số vào nhé.
+
+* Server IP, server Port
+Cuối cùng thay đổi port và ip server để phù hợp với cloud Openshift. 
+
+{% highlight html linenos %}
+...
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+...
+app.listen(server_port, server_ip_address);		//start Express server
+{% endhighlight %}
+
 <h2>Deploy</h2>
 
 * **Bước 1:** clone source code của trang web<br>
