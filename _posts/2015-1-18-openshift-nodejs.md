@@ -32,18 +32,18 @@ Giải thích thêm: do client tools của Openshift(và đa số các cloud kh�
 
 Giờ mình vào phần chính:<br>
 
-* **Bước 1**: Cài đặt Ruby<br>
+* **Bước 1:** Cài đặt Ruby<br>
 Tải phiên bản mới nhất của <a class="btn btn-default" href="http://rubyinstaller.org/">**RubyInstaller**</a> và cài đặt. 
 Khi cài đặt các bạn nhớ tick chọn **Add Ruby executables to your PATH** để có thể chạy Ruby bằng Command Line.
 <br>
 ![Hình 3]({{ site.url }}/assets/media/3.png)<br>
 
-* Bước 2: Cài đặt Git<br>
+* **Bước 2:** Cài đặt Git<br>
 Bạn nào có rồi thì thôi nhé, cài để quản lý code của mình trên server ấy mà.
 Tương tự Ruby, các bạn cũng download <a class="btn btn-default" href="http://msysgit.github.io/">**Git for Windows**</a> và cài đặt.
 Tick chọn **Run Git from the Windows Command Link Prompt** khi cài.
 
-* Bước 3: Cài đặt rhc<br>
+* **Bước 3:** Cài đặt rhc<br>
 Đây chính là client của Openshift, các bạn mở command line và nhập dòng lệnh sau:<br>
 {% highlight ruby %}
 C:\> gem install rhc
@@ -55,8 +55,8 @@ C:\> gem install rhc
 Phần này có 2 cách làm một là tạo bằng command line hai là tạo trực tiếp trên web của Openshift, mình không biết dùng command line(gà ><) nên sẽ hướng dẫn tạo trực tiếp.
 Bước này thực chất rất đơn giản các bạn hoàn toàn có thể tự làm(mình mò đại cũng ra không cần phải xem theo tut :D)<br>
 
-* Bước 1: đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
-* Bước 2 -> n: tuần tự theo hình<br>
+* **Bước 1:** đăng nhập vào <a class="btn btn-default" href="http://msysgit.github.io/">**Openshift**</a><br>
+* **Bước 2 -> n:** tuần tự theo hình<br>
 ![Hình 4]({{ site.url }}/assets/media/4.png)<br>
 <br>
 ![Hình 5]({{ site.url }}/assets/media/5.png)<br>
@@ -75,14 +75,14 @@ Hoàn thành tạo app<br>
 Phần này mình sẽ update sau giờ bận xem đá banh rồi :3<br>
 <h2>Deploy</h2>
 
-* Bước 1: clone source code của trang web<br>
-Các bạn đăng nhập vào Openshift và ứng dụng của mình và copy đoạn code trong ô **Source Code**, gọi đoạn code này là SOURCECODE<br>
+* **Bước 1:** clone source code của trang web<br>
+Các bạn đăng nhập vào Openshift và ứng dụng của mình và copy đoạn code trong ô **Source Code**, gọi đoạn code này là **SOURCECODE**<br>
 ![Hình 9]({{ site.url }}/assets/media/9.png)<br>
 Sau đó mở command line, nhập lệnh sau để clone source code của trang web<br>
 {% highlight ruby %}
-C:\> git clone SOURCECODE<br>
+C:\> git clone **SOURCECODE**<br>
 {% endhighlight %}
-* Bước 2: <br>
+* **Bước 2:** <br>
 Giờ bạn chỉ cần copy tất cả code của trang web bạn vào thư mục vừa clone về được. Sau đó dùng các lệnh sau đây đủ deploy lên server<br>
 {% highlight ruby %}
 git add
