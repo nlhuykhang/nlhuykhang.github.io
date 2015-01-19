@@ -43,8 +43,8 @@ Bạn nào có rồi thì thôi nhé, cài để quản lý code của mình tr�
 Tương tự Ruby, các bạn cũng download <a class="btn btn-default" href="http://msysgit.github.io/">**Git for Windows**</a> và cài đặt.
 Tick chọn **Run Git from the Windows Command Link Prompt** khi cài.
 
-* Bước 3: Cài đặt rhc<br>
-<p>Đây chính là client của Openshift, các bạn mở command line và nhập dòng lệnh sau:<br>
+* <p>Bước 3: Cài đặt rhc<br>
+Đây chính là client của Openshift, các bạn mở command line và nhập dòng lệnh sau:<br>
 {% highlight ruby %}
 C:\> gem install rhc
 {% endhighlight %}
