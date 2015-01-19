@@ -32,7 +32,7 @@ Giải thích thêm: do client tools của Openshift(và đa số các cloud kh�
 
 Giờ mình vào phần chính:<br>
 
-* Bước 1: Cài đặt Ruby<br>
+* **Bước 1**: Cài đặt Ruby<br>
 Tải phiên bản mới nhất của <a class="btn btn-default" href="http://rubyinstaller.org/">**RubyInstaller**</a> và cài đặt. 
 Khi cài đặt các bạn nhớ tick chọn **Add Ruby executables to your PATH** để có thể chạy Ruby bằng Command Line.
 <br>
@@ -43,12 +43,11 @@ Bạn nào có rồi thì thôi nhé, cài để quản lý code của mình tr�
 Tương tự Ruby, các bạn cũng download <a class="btn btn-default" href="http://msysgit.github.io/">**Git for Windows**</a> và cài đặt.
 Tick chọn **Run Git from the Windows Command Link Prompt** khi cài.
 
-* <p>Bước 3: Cài đặt rhc<br>
+* Bước 3: Cài đặt rhc<br>
 Đây chính là client của Openshift, các bạn mở command line và nhập dòng lệnh sau:<br>
 {% highlight ruby %}
 C:\> gem install rhc
 {% endhighlight %}
-</p>
 
 Đến đây, nếu tất cả thành công chúng ta đã hoàn thành phần cài đặt. 
 
