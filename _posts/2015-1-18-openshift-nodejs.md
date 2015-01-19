@@ -80,7 +80,7 @@ Các bạn đăng nhập vào Openshift và ứng dụng của mình và copy đ
 ![Hình 9]({{ site.url }}/assets/media/9.png)<br>
 Sau đó mở command line, nhập lệnh sau để clone source code của trang web<br>
 {% highlight ruby %}
-C:\> git clone **SOURCECODE**<br>
+C:\> git clone SOURCECODE
 {% endhighlight %}
 * **Bước 2:** <br>
 Giờ bạn chỉ cần copy tất cả code của trang web bạn vào thư mục vừa clone về được. Sau đó dùng các lệnh sau đây đủ deploy lên server<br>
