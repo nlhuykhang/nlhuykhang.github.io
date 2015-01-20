@@ -135,3 +135,9 @@ Mỗi lần bạn cần thay đổi về source code của trang web chỉ cần
 Vậy là đã xong web của bạn giờ đã được chạy trên cloud Openshift.
 
 Log in and enjoy it.
+<br><br><br>
+**Tham khảo**
+
+* <a href="https://developers.openshift.com/en/getting-started-overview.html">**Getting started with Openshift**</a>
+* <a href="https://blog.openshift.com/getting-started-with-mongodb-on-nodejs-on-openshift/">**Getting Started with MongoDB on Node.js on OpenShift**</a>
+* <a href="http://stackoverflow.com/questions/13570226/error-installing-rubygems-on-ruby-command-prompt-in-win7">**Error installing Rubygems on ruby command prompt in Win7**</a>
