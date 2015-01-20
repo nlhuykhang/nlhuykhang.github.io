@@ -7,9 +7,9 @@ fullview: true
 ---
 Trích từ quyển The Leader Who Had No Title: :=
 
-# Bạn sống đến ngày cuối cùng nhưng vẫn chưa nghe được bài hát tuyệt diệu mà lẽ ra cuộc sống sẽ hát trong tầm hồn bạn
-# Bạn sống đến ngày cuối cùng nhưng vẫn chưa trải nghiệm được quyền năng tự nhiên cho phép bạn làm những điều tuyệt vời và đạt được những thành tựu tuyệt vời
-# Bạn sống đến ngày cuối cùng và nhận ra mình chưa bao giờ khích lệ hay truyền cảm hứng cho bất cứ ai bằng tấm gương của mình
+1. Bạn sống đến ngày cuối cùng nhưng vẫn chưa nghe được bài hát tuyệt diệu mà lẽ ra cuộc sống sẽ hát trong tầm hồn bạn
++ Bạn sống đến ngày cuối cùng nhưng vẫn chưa trải nghiệm được quyền năng tự nhiên cho phép bạn làm những điều tuyệt vời và đạt được những thành tựu tuyệt vời
++ Bạn sống đến ngày cuối cùng và nhận ra mình chưa bao giờ khích lệ hay truyền cảm hứng cho bất cứ ai bằng tấm gương của mình
 # Bạn sống đến ngày cuối cùng và đau khổ nhận ra rằng vì chưa bao giờ dám chấp nhận một rủi ro nào nên bạn chưa bao giờ đạt được một phần thưởng sáng chói nào
 # Bạn sống đến ngày cuối cùng và hiểu rằng mình đã đánh mất cơ hội trở thành một bậc thầy bởi vì bạn tin rằng mình chỉ là một người bình thường
 # Bạn sống đến ngày cuối cùng và cảm thấy rất ân hận vì bạn không bao giờ học được kỹ năng biến những nghịch cảnh thành chiến thắng huy hoàng
