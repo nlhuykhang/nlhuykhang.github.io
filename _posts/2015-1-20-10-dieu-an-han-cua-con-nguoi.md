@@ -5,7 +5,7 @@ categories: [book, quotes]
 tags: [The leader with no title, Alphabooks]
 fullview: true
 ---
-Trích từ quyển The Leader Who Had No Title:
+Trích từ quyển <a href="http://www.theleaderwhohadnotitle.com/">The Leader Who Had No Title</a>:
 
 1. Bạn sống đến ngày cuối cùng nhưng vẫn chưa nghe được bài hát tuyệt diệu mà lẽ ra cuộc sống sẽ hát trong tầm hồn bạn
 2. Bạn sống đến ngày cuối cùng nhưng vẫn chưa trải nghiệm được quyền năng tự nhiên cho phép bạn làm những điều tuyệt vời và đạt được những thành tựu tuyệt vời
