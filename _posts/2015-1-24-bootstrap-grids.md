@@ -26,9 +26,6 @@ Tâng bóc nhiều thế được rồi, phần chính cho post này là để n
 
 **Tham khảo**
 
-	* <a href="https://www.codeschool.com/courses/blasting-off-with-bootstrap">**Blasting off with Bootstrap**</a>
-	<br>
-	* <a href="http://getbootstrap.com/">**Bootstrap**</a>	
-	<br>
-	* <a href="https://github.com/codeschool/BlastingOffWithBootstrapDemo">**Code of Blasting off with Bootstrap**</a>
-	<br>
+* <a href="https://www.codeschool.com/courses/blasting-off-with-bootstrap">**Blasting off with Bootstrap**</a>
+* <a href="http://getbootstrap.com/">**Bootstrap**</a>	
+* <a href="https://github.com/codeschool/BlastingOffWithBootstrapDemo">**Code of Blasting off with Bootstrap**</a>
