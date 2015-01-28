@@ -125,6 +125,7 @@ article.home h2 a,
 article.home h3 a,
 article.home h4 a {
 	color: #120B12;
+	background-color: lightslategray;
 }
 article.home h1 a:hover,
 article.home h2 a:hover,
