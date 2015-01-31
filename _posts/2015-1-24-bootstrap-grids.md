@@ -45,8 +45,8 @@ Khi thêm Bootstrap vào các bạn cần lưu ý: do các file js của Bootstr
 <br><br>
 <h1>Grid trong Bootstrap</h1>
 <h2>Grid là gì?</h2>
-Grid trong tiếng Anh là lưới, đối với Bootstrap ta có thể hiểu grid là một hệ thống các dòng và cột đan xen nhau tạo thành một lưới, nội dung của trang html sẽ được đặt trên lưới này. Nếu như Microsoft Word cung cấp cho chúng ta các cách thức đa dạng để canh lề và sắp xếp nội dung văn bản thì ở Bootstrap ta có grid. Các bạn xem hình sau:<br>
-![Hình 1]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/1.png)<br>
+Grid trong tiếng Anh là lưới, đối với Bootstrap ta có thể hiểu grid là một hệ thống các dòng và cột đan xen nhau tạo thành một lưới, nội dung của trang html sẽ được đặt trên lưới này. Nếu như Microsoft Word cung cấp cho chúng ta các cách thức đa dạng để canh lề và sắp xếp nội dung văn bản thì ở Bootstrap ta có grid. Các bạn xem hình sau:<br><br>
+![Hình 1]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/1.png)<br><br>
 
 Hình này có 8 dòng, trên mỗi dòng có các ô được đánh số khác nhau dựa theo độ lớn của chúng. Nếu chúng ta tính tổng các ôn theo từng dòng sẽ được kết quả 12 cho mỗi dòng.
 <br>
@@ -83,14 +83,14 @@ Về cách thêm class, Bootstrap có một class tên gọi <span style="font-w
 <br>
 <strong>&nbsp;.container</strong> giúp cho trang web tự scale khi kích thước của browser thay đổi, như là khi xem trên desktop hay tablet thì kích thước browser sẽ khác nhau container sẽ giúp trang web responsive sao cho phù hợp(mình đỡ phải làm sướng vật :3)
 <br><br>
-Ta xét qua ví dụ sau về cách dùng grid:
-![Hình 2]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/2.png)<br>
+Ta xét qua ví dụ sau về cách dùng grid:<br><br>
+![Hình 2]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/2.png)<br><br>
 Đây là trang kết quả mà ta muốn tạo thành, mục tiêu là dùng grid để sắp xếp các nội dung trang html được như trên hình
 <br><br>
-![Hình 3]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/3.png)<br>
+![Hình 3]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/3.png)<br><br>
 Để làm được như vậy mình chia trang html làm 2 row
 <br><br>
-![Hình 4]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/4.png)<br>
+![Hình 4]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/4.png)<br><br>
 Row 1 có 2 cột mỗi cột có kích thước bằng 6, row 2 có 3 cột mỗi cột kích thước bằng 4. Và đây là code:
 <br>
 {% highlight html linenos %}
@@ -151,7 +151,7 @@ Các bạn có thể thấy, khi thêm các class các class css ta không cần
   </div>
 ...
 {% endhighlight %}
-Đoạn code trên chỉ có một row, trong row này cộng cả thảy 5+2+6 ta thấy tổng bằng 13 cột -> vi phạm quy ước và giao diện nó thành thế này:<br>
+Đoạn code trên chỉ có một row, trong row này cộng cả thảy 5+2+6 ta thấy tổng bằng 13 cột -> vi phạm quy ước và giao diện nó thành thế này:<br><br>
 ![Hình 6]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/6.png)<br><br>
 Do tổng kích thước vượt quá 12 thành ra cột thứ 2 nó tự nhảy xuống thêm 1 dòng, cá nhân mình thấy mặc dù lỗi nhưng cách thằng Bootstrap xử lý rất là ổn ít nhất vẫn còn ra cái gì đó xem được chứ không mất luôn tất cả :). Nói chung bug là bug nhìn xấu hẳn đi các bạn cẩn thận nhé.
 <br><br>
