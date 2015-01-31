@@ -60,7 +60,7 @@ Dựa vào những quy ước này ta có thể tạo những lưới đa dạng
 <h2>Sử dụng thế nào?</h2>
 Trả lời: thêm class của Bootstrap vào tag html. Như đã nói ở trên thì Bootstrap thực chất là một bộ các file chủ yếu là css và js đi cùng với nhau nên để dùng nó ta chỉ cần thêm class do nó định nghĩa sẳn vào trong trang html của mình là được. Các bạn chú ý ta hoàn toàn có thể sửa mã nguồn của Bootstrap theo mong muốn của mình, nhưng ta không nên làm vậy thì khả năng xảy ra lỗi rất phiền phức bởi thế nếu có ý định như thế thì tốt hơn bạn nên tạo file css của chính mình và khai báo đè lên thuộc tính của Bootstrap, cách này an toàn hơn không lo đụng độ, không lo bug...
 <br><br>
-Về cách thêm class, Bootstrap có một class tên gọi <strong>.container</strong> và yêu cầu mặc định tất cả các class khác phải nằm trong class này. Do đó khi sử dụng Bootstrap, đầu tiên ta cứ thêm cái class <strong>.container</strong> này đầu tiên nhé:
+Về cách thêm class, Bootstrap có một class tên gọi <span style="font-weight: bold">.container</span> và yêu cầu mặc định tất cả các class khác phải nằm trong class này. Do đó khi sử dụng Bootstrap, đầu tiên ta cứ thêm cái class <strong>.container</strong> này đầu tiên nhé:
 <br>
 {% highlight html linenos %}
 ...
