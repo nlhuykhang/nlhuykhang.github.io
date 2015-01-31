@@ -13,6 +13,9 @@ Updating...
 * <a href="#intro">**Sơ lược về Bootstrap**</a>
 * <a href="#use">**Sử dụng Bootstrap**</a>
 * <a href="#grid">**Grid trong Bootstrap**</a>
+** <a href="#what">**Grid là gì?**</a>
+** <a href="#how">**Sử dụng thế nào?**</a>
+** <a href="#example">**Một vài ví dụ**</a>
 
 Hôm nay mình vừa học xong khóa học online<a class="btn btn-link btn-sm" href="https://www.codeschool.com/courses/blasting-off-with-bootstrap">Blasting off with Bootstrap</a>về Bootstrap trên<a class="btn btn-link btn-sm" href="https://www.codeschool.com/">Codeschool</a>, có một nhận xét đơn giản phải nói là "công nhận bọn này nó bá thật". Nói thế không bởi vì hàm lượng kiến thức học được về Bootstrap vì tính ra chỉ học được những thứ cơ bản nhất thôi, mà vì cái cách mà học truyền đạt. Cảm giác khi học là có một cái flow rất thanh thoát, rành mạnh sự kết hợp nhuần nhuyễn của người nói và slide được thể hiện trên các clip giúp mình nhớ và hiểu được vài thứ về Bootstrap chỉ sau khoảng 3h bỏ công ngồi học cả khóa của họ. Mà đặc biệt thích nhất là cái video ca nhạn giới thiệu đầu mỗi phần, làm như kiểu phần giới thiệu đầu một phim truyền hình vậy. Nhạc làm hơi bị hay nghĩ dám chừng thằng cha director của Codeschool cũng thích chơi nhạc cụ giống mình :v, nên mới có một cái model như vậy cho tất cả khóa học trên đó :)).
 <br><br>
@@ -50,7 +53,7 @@ Sau đó ta phải thêm đường dẫn đến các file css và js của Boots
 Khi thêm Bootstrap vào các bạn cần lưu ý: do các file js của Bootstrap dùng JQuery để phát triển thêm nên ta phải thêm cả JQuery(dòng 9) vào và phải thêm trước khi thêm file js của Bootstrap thì mới có thể dùng Bootstrap được. JQuery cũng là nguồn mở các bạn nên down về dùng như ta đang làm với Bootstrap(ví dụ mình để link online cho tiện thôi chứ dùng online nhiều lúc mạng xiđa ức chế lắm)
 <br><br>
 <h1><a id="grid">Grid trong Bootstrap</a></h1>
-<h2>Grid là gì?</h2>
+<h2><a id="what">Grid là gì?</a></h2>
 Grid trong tiếng Anh là lưới, đối với Bootstrap ta có thể hiểu grid là một hệ thống các dòng và cột đan xen nhau tạo thành một lưới, nội dung của trang html sẽ được đặt trên lưới này. Nếu như Microsoft Word cung cấp cho chúng ta các cách thức đa dạng để canh lề và sắp xếp nội dung văn bản thì ở Bootstrap ta có grid. Các bạn xem hình sau:<br><br>
 ![Hình 1]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/1.png)<br><br>
 
@@ -63,7 +66,7 @@ Grid có 2 đơn vị cơ bản ta cần nắm là row(dòng) và column(cột):
 
 Dựa vào những quy ước này ta có thể tạo những lưới đa dạng về cấu trúc để đặt nội dung của mình vào đó. Như ta có thể lồng nhiều row vào cùng một row, row vào một cột sau đó từ row này lại khai báo thêm các column khác ... Tùy vào mục đích của mình bạn có thể thiết kế grid thế nào cũng được.
 <br><br>
-<h2>Sử dụng thế nào?</h2>
+<h2><a id="how">Sử dụng thế nào?</a></h2>
 Trả lời: thêm class của Bootstrap vào tag html. Như đã nói ở trên thì Bootstrap thực chất là một bộ các file chủ yếu là css và js đi cùng với nhau nên để dùng nó ta chỉ cần thêm class do nó định nghĩa sẳn vào trong trang html của mình là được. Các bạn chú ý ta hoàn toàn có thể sửa mã nguồn của Bootstrap theo mong muốn của mình, nhưng ta không nên làm vậy thì khả năng xảy ra lỗi rất phiền phức bởi thế nếu có ý định như thế thì tốt hơn bạn nên tạo file css của chính mình và khai báo đè lên thuộc tính của Bootstrap, cách này an toàn hơn không lo đụng độ, không lo bug...
 <br><br>
 Về cách thêm class, Bootstrap có một class tên gọi <span style="font-weight: bold">&nbsp; .container </span> và yêu cầu mặc định tất cả các class khác phải nằm trong class này. Do đó khi sử dụng Bootstrap, đầu tiên ta cứ thêm cái class <strong>&nbsp; .container</strong> này đầu tiên nhé:
@@ -130,7 +133,7 @@ Như các bạn thấy ở trên để thêm row ta dùng class <strong>&nbsp; r
 <br><br>
 Trong ví dụ col-md-4: kích thước column là 4, md là loại khung hình medium. Bootstrap có tổng cộng 4 loại khung hình theo thức tự từ nhỏ đến lớn: xs <=> extra small, sm <=> small, md <=> medium, lg <=> large. Mục đích của các loại khung hình này nhằm giúp ta có thể khiến trang web responsive sao cho thích hợp với các thiết bị có kích thước khác nhau, phần này mình không biết viết thế nào -> để sau tính :v.
 <br><br>
-<h2>Một vài ví dụ</h2>
+<h2><a id="example">Một vài ví dụ</a></h2>
 ![Hình 5]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/5.png)<br><br>
 Trong ví dụ này ta có thêm một class mới để tạo ra cột rỗng là col-md-offset-1 và col-md-offset-2. Tên 2 class này khá tương tự tên class column bình thường khác mỗi chữ offset, cú pháp tổng quát như sau <strong>&nbsp; col-[loại khung hình]-offset-[kích thước cột rỗng 1->12]</strong>. Nhìn các quy ước đặt tên này cảm thấy rất sướng người vì nhìn là hiểu chẳng cần động tí neuron nào, mình thấy đây là lí do vì sao mà Bootstrap rất thông dụng: đơn giản dễ dùng. Code:
 {% highlight html linenos %}
