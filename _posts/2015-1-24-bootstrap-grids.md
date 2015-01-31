@@ -120,12 +120,12 @@ Row 1 có 2 cột mỗi cột có kích thước bằng 6, row 2 có 3 cột m�
   </div>
 ...
 {% endhighlight %}
-Như các bạn thấy ở trên để thêm row ta dùng class <strong>&nbsp;row</strong>. Đối với column ta dùng class <strong>&nbsp;&nbsp;col-md-4 và col-md-6</strong> tương ứng với cột có kích thước 4 và 6. Bootstrap còn có các lớp khác tương ứng với kích thước của các cột chạy từ 1 đến 12, các class này được đặt tên rất dễ nhớ với định dạng như sau: <strong>&nbsp;col-[loại khung hình]-[kích thước column 1->12]</strong>.<br>
+Như các bạn thấy ở trên để thêm row ta dùng class <strong>&nbsp; row</strong>. Đối với column ta dùng class <strong>&nbsp;&nbsp;col-md-4 và col-md-6</strong> tương ứng với cột có kích thước 4 và 6. Bootstrap còn có các lớp khác tương ứng với kích thước của các cột chạy từ 1 đến 12, các class này được đặt tên rất dễ nhớ với định dạng như sau: <strong>&nbsp; col-[loại khung hình]-[kích thước column 1->12]</strong>.<br>
 Trong ví dụ col-md-4: kích thước column là 4, md là loại khung hình medium. Bootstrap có tổng cộng 4 loại khung hình theo thức tự từ nhỏ đến lớn: xs <=> extra small, sm <=> small, md <=> medium, lg <=> large. Mục đích của các loại khung hình này nhằm giúp ta có thể khiến trang web responsive sao cho thích hợp với các thiết bị có kích thước khác nhau, phần này mình không biết viết thế nào -> để sau tính :v.
 <br><br>
 <h2>Một vài ví dụ</h2>
 ![Hình 5]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/5.png)<br>
-Trong ví dụ này ta có thêm một class mới để tạo ra cột rỗng là col-md-offset-1 và col-md-offset-2. Tên 2 class này khá tương tự tên class column bình thường khác mỗi chữ offset, cú pháp tổng quát như sau <strong>&nbsp;col-[loại khung hình]-offset-[kích thước cột rỗng 1->12]</strong>. Nhìn các quy ước đặt tên này cảm thấy rất sướng người vì nhìn là hiểu chẳng cần động tí neuron nào, mình thấy đây là lí do vì sao mà Bootstrap rất thông dụng: đơn giản dễ dùng. Code:
+Trong ví dụ này ta có thêm một class mới để tạo ra cột rỗng là col-md-offset-1 và col-md-offset-2. Tên 2 class này khá tương tự tên class column bình thường khác mỗi chữ offset, cú pháp tổng quát như sau <strong>&nbsp; col-[loại khung hình]-offset-[kích thước cột rỗng 1->12]</strong>. Nhìn các quy ước đặt tên này cảm thấy rất sướng người vì nhìn là hiểu chẳng cần động tí neuron nào, mình thấy đây là lí do vì sao mà Bootstrap rất thông dụng: đơn giản dễ dùng. Code:
 {% highlight html linenos %}
 ...
 <div class='container'>
