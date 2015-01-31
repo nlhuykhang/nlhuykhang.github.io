@@ -49,7 +49,7 @@ Grid trong tiếng Anh là lưới, đối với Bootstrap ta có thể hiểu g
 ![Hình 1]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/1.png)<br><br>
 
 Hình này có 8 dòng, trên mỗi dòng có các ô được đánh số khác nhau dựa theo độ lớn của chúng. Nếu chúng ta tính tổng các ôn theo từng dòng sẽ được kết quả 12 cho mỗi dòng.
-<br>
+<br><br>
 Grid có 2 đơn vị cơ bản ta cần nắm là row(dòng) và column(cột):
 
 * Row(dòng) là đơn vị tính theo chiều dọc của trang html, một trang html có thể có bao nhiêu row tùy thích, mỗi row có thể kéo dài bao nhiêu tùy thích
@@ -120,7 +120,8 @@ Row 1 có 2 cột mỗi cột có kích thước bằng 6, row 2 có 3 cột m�
   </div>
 ...
 {% endhighlight %}
-Như các bạn thấy ở trên để thêm row ta dùng class <strong>&nbsp; row</strong>. Đối với column ta dùng class <strong>&nbsp;&nbsp;col-md-4 và col-md-6</strong> tương ứng với cột có kích thước 4 và 6. Bootstrap còn có các lớp khác tương ứng với kích thước của các cột chạy từ 1 đến 12, các class này được đặt tên rất dễ nhớ với định dạng như sau: <strong>&nbsp; col-[loại khung hình]-[kích thước column 1->12]</strong>.<br>
+Như các bạn thấy ở trên để thêm row ta dùng class <strong>&nbsp; row</strong>. Đối với column ta dùng class <strong>&nbsp;&nbsp;col-md-4 và col-md-6</strong> tương ứng với cột có kích thước 4 và 6. Bootstrap còn có các lớp khác tương ứng với kích thước của các cột chạy từ 1 đến 12, các class này được đặt tên rất dễ nhớ với định dạng như sau: <strong>&nbsp; col-[loại khung hình]-[kích thước column 1->12]</strong>.
+<br><br>
 Trong ví dụ col-md-4: kích thước column là 4, md là loại khung hình medium. Bootstrap có tổng cộng 4 loại khung hình theo thức tự từ nhỏ đến lớn: xs <=> extra small, sm <=> small, md <=> medium, lg <=> large. Mục đích của các loại khung hình này nhằm giúp ta có thể khiến trang web responsive sao cho thích hợp với các thiết bị có kích thước khác nhau, phần này mình không biết viết thế nào -> để sau tính :v.
 <br><br>
 <h2>Một vài ví dụ</h2>
