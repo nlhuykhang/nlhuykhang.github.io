@@ -60,7 +60,7 @@ Dựa vào những quy ước này ta có thể tạo những lưới đa dạng
 <h2>Sử dụng thế nào?</h2>
 Trả lời: thêm class của Bootstrap vào tag html. Như đã nói ở trên thì Bootstrap thực chất là một bộ các file chủ yếu là css và js đi cùng với nhau nên để dùng nó ta chỉ cần thêm class do nó định nghĩa sẳn vào trong trang html của mình là được. Các bạn chú ý ta hoàn toàn có thể sửa mã nguồn của Bootstrap theo mong muốn của mình, nhưng ta không nên làm vậy thì khả năng xảy ra lỗi rất phiền phức bởi thế nếu có ý định như thế thì tốt hơn bạn nên tạo file css của chính mình và khai báo đè lên thuộc tính của Bootstrap, cách này an toàn hơn không lo đụng độ, không lo bug...
 <br><br>
-Về cách thêm class, Bootstrap có một class tên gọi <span style="font-weight: bold"> .container </span> và yêu cầu mặc định tất cả các class khác phải nằm trong class này. Do đó khi sử dụng Bootstrap, đầu tiên ta cứ thêm cái class <strong> .container </strong> này đầu tiên nhé:
+Về cách thêm class, Bootstrap có một class tên gọi <span style="font-weight: bold">&nbsp;.container </span> và yêu cầu mặc định tất cả các class khác phải nằm trong class này. Do đó khi sử dụng Bootstrap, đầu tiên ta cứ thêm cái class <strong>&nbsp;.container</strong> này đầu tiên nhé:
 <br>
 {% highlight html linenos %}
 ...
@@ -81,7 +81,7 @@ Về cách thêm class, Bootstrap có một class tên gọi <span style="font-w
 ...
 {% endhighlight %}
 <br>
-<strong>.container</strong> giúp cho trang web tự scale khi kích thước của browser thay đổi, như là khi xem trên desktop hay tablet thì kích thước browser sẽ khác nhau container sẽ giúp trang web responsive sao cho phù hợp(mình đỡ phải làm sướng vật :3)
+<strong>&nbsp;.container</strong> giúp cho trang web tự scale khi kích thước của browser thay đổi, như là khi xem trên desktop hay tablet thì kích thước browser sẽ khác nhau container sẽ giúp trang web responsive sao cho phù hợp(mình đỡ phải làm sướng vật :3)
 <br><br>
 Ta xét qua ví dụ sau về cách dùng grid:
 ![Hình 2]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/2.png)<br>
@@ -120,12 +120,12 @@ Row 1 có 2 cột mỗi cột có kích thước bằng 6, row 2 có 3 cột m�
   </div>
 ...
 {% endhighlight %}
-Như các bạn thấy ở trên để thêm row ta dùng class <strong>row</strong>. Đối với column ta dùng class <strong>&nbsp;col-md-4 và col-md-6</strong> tương ứng với cột có kích thước 4 và 6. Bootstrap còn có các lớp khác tương ứng với kích thước của các cột chạy từ 1 đến 12, các class này được đặt tên rất dễ nhớ với định dạng như sau: <strong>col-[loại khung hình]-[kích thước column 1->12]</strong>.<br>
+Như các bạn thấy ở trên để thêm row ta dùng class <strong>&nbsp;row</strong>. Đối với column ta dùng class <strong>&nbsp;col-md-4 và col-md-6</strong> tương ứng với cột có kích thước 4 và 6. Bootstrap còn có các lớp khác tương ứng với kích thước của các cột chạy từ 1 đến 12, các class này được đặt tên rất dễ nhớ với định dạng như sau: <strong>&nbsp;col-[loại khung hình]-[kích thước column 1->12]</strong>.<br>
 Trong ví dụ col-md-4: kích thước column là 4, md là loại khung hình medium. Bootstrap có tổng cộng 4 loại khung hình theo thức tự từ nhỏ đến lớn: xs <=> extra small, sm <=> small, md <=> medium, lg <=> large. Mục đích của các loại khung hình này nhằm giúp ta có thể khiến trang web responsive sao cho thích hợp với các thiết bị có kích thước khác nhau, phần này mình không biết viết thế nào -> để sau tính :v.
 <br><br>
 <h2>Một vài ví dụ</h2>
 ![Hình 5]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/5.png)<br>
-Trong ví dụ này ta có thêm một class mới để tạo ra cột rỗng là col-md-offset-1 và col-md-offset-2. Tên 2 class này khá tương tự tên class column bình thường khác mỗi chữ offset, cú pháp tổng quát như sau <strong>col-[loại khung hình]-offset-[kích thước cột rỗng 1->12]</strong>. Nhìn các quy ước đặt tên này cảm thấy rất sướng người vì nhìn là hiểu chẳng cần động tí neuron nào, mình thấy đây là lí do vì sao mà Bootstrap rất thông dụng: đơn giản dễ dùng. Code:
+Trong ví dụ này ta có thêm một class mới để tạo ra cột rỗng là col-md-offset-1 và col-md-offset-2. Tên 2 class này khá tương tự tên class column bình thường khác mỗi chữ offset, cú pháp tổng quát như sau <strong>&nbsp;col-[loại khung hình]-offset-[kích thước cột rỗng 1->12]</strong>. Nhìn các quy ước đặt tên này cảm thấy rất sướng người vì nhìn là hiểu chẳng cần động tí neuron nào, mình thấy đây là lí do vì sao mà Bootstrap rất thông dụng: đơn giản dễ dùng. Code:
 {% highlight html linenos %}
 ...
 <div class='container'>
