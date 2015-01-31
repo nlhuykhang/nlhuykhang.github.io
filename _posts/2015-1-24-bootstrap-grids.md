@@ -124,7 +124,7 @@ Như các bạn thấy ở trên để thêm row ta dùng class <strong>&nbsp; r
 Trong ví dụ col-md-4: kích thước column là 4, md là loại khung hình medium. Bootstrap có tổng cộng 4 loại khung hình theo thức tự từ nhỏ đến lớn: xs <=> extra small, sm <=> small, md <=> medium, lg <=> large. Mục đích của các loại khung hình này nhằm giúp ta có thể khiến trang web responsive sao cho thích hợp với các thiết bị có kích thước khác nhau, phần này mình không biết viết thế nào -> để sau tính :v.
 <br><br>
 <h2>Một vài ví dụ</h2>
-![Hình 5]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/5.png)<br>
+![Hình 5]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/5.png)<br><br>
 Trong ví dụ này ta có thêm một class mới để tạo ra cột rỗng là col-md-offset-1 và col-md-offset-2. Tên 2 class này khá tương tự tên class column bình thường khác mỗi chữ offset, cú pháp tổng quát như sau <strong>&nbsp; col-[loại khung hình]-offset-[kích thước cột rỗng 1->12]</strong>. Nhìn các quy ước đặt tên này cảm thấy rất sướng người vì nhìn là hiểu chẳng cần động tí neuron nào, mình thấy đây là lí do vì sao mà Bootstrap rất thông dụng: đơn giản dễ dùng. Code:
 {% highlight html linenos %}
 ...
@@ -151,8 +151,8 @@ Các bạn có thể thấy, khi thêm các class các class css ta không cần
   </div>
 ...
 {% endhighlight %}
-Đoạn code trên chỉ có một row, trong row này cộng cả thảy 5+2+6 ta thấy tổng bằng 13 cột -> vi phạm quy ước và giao diện nó thành thế này:
-![Hình 6]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/6.png)<br>
+Đoạn code trên chỉ có một row, trong row này cộng cả thảy 5+2+6 ta thấy tổng bằng 13 cột -> vi phạm quy ước và giao diện nó thành thế này:<br>
+![Hình 6]({{ site.url }}/assets/media/2015-1-24-bootstrap-grid/6.png)<br><br>
 Do tổng kích thước vượt quá 12 thành ra cột thứ 2 nó tự nhảy xuống thêm 1 dòng, cá nhân mình thấy mặc dù lỗi nhưng cách thằng Bootstrap xử lý rất là ổn ít nhất vẫn còn ra cái gì đó xem được chứ không mất luôn tất cả :). Nói chung bug là bug nhìn xấu hẳn đi các bạn cẩn thận nhé.
 <br><br>
 
