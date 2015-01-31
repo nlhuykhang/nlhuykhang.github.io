@@ -13,9 +13,9 @@ Updating...
 * <a href="#intro">**Sơ lược về Bootstrap**</a>
 * <a href="#use">**Sử dụng Bootstrap**</a>
 * <a href="#grid">**Grid trong Bootstrap**</a>
-  ** <a href="#what">**Grid là gì?**</a>
-  ** <a href="#how">**Sử dụng thế nào?**</a>
-  ** <a href="#example">**Một vài ví dụ**</a>
+    * <a href="#what">**Grid là gì?**</a>
+    * <a href="#how">**Sử dụng thế nào?**</a>
+    * <a href="#example">**Một vài ví dụ**</a>
 
 Hôm nay mình vừa học xong khóa học online<a class="btn btn-link btn-sm" href="https://www.codeschool.com/courses/blasting-off-with-bootstrap">Blasting off with Bootstrap</a>về Bootstrap trên<a class="btn btn-link btn-sm" href="https://www.codeschool.com/">Codeschool</a>, có một nhận xét đơn giản phải nói là "công nhận bọn này nó bá thật". Nói thế không bởi vì hàm lượng kiến thức học được về Bootstrap vì tính ra chỉ học được những thứ cơ bản nhất thôi, mà vì cái cách mà học truyền đạt. Cảm giác khi học là có một cái flow rất thanh thoát, rành mạnh sự kết hợp nhuần nhuyễn của người nói và slide được thể hiện trên các clip giúp mình nhớ và hiểu được vài thứ về Bootstrap chỉ sau khoảng 3h bỏ công ngồi học cả khóa của họ. Mà đặc biệt thích nhất là cái video ca nhạn giới thiệu đầu mỗi phần, làm như kiểu phần giới thiệu đầu một phim truyền hình vậy. Nhạc làm hơi bị hay nghĩ dám chừng thằng cha director của Codeschool cũng thích chơi nhạc cụ giống mình :v, nên mới có một cái model như vậy cho tất cả khóa học trên đó :)).
 <br><br>
