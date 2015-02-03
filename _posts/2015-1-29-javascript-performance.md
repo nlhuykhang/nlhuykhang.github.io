@@ -32,22 +32,22 @@ Trở lại chuyện performance của sản phẩm, dạo gần đây may mắn
 Ta xét ví dụ sau:
 ![Hình 1]({{ site.url }}/assets/media/2015-1-29-javascript-performance/1.png)<br><br>
 Trên đây là một thủ tục thường gặp trong cuộc đời hằng ngày của coder, mình thì không chắc lắm coder lâu năm đã đi làm rồi thì viết thế nào(vì mình đã đi làm đâu mà biết) nhưng đối với những coder tương lai đang chà mông trên ghế nhà trường thì mình chắc chắn là kiểu code trên là cực kì phổ biến. Chính bản thân mình cũng thường viết thế trước khi biết cách giải quyết tốt hơn.<br><br>
-Giải quyết tốt hơn? chắc nhiều bạn sẽ hỏi câu này. Đúng đây bạn có cách tốt hơn thật, chúng ta nhìn vào đoạn code thấy quá là đơn giản kiểu gì mà có thể viết khác đi mà tốt hơn nhiều được có chăng chỉ là tí ít thôi. Vậy bây giờ hãy phân tích thử đối với vòng lập trên với dữ liệu mình cho, **&nbspsẽ có tổng cộng bao nhiêu lệnh gọi truy xuất bộ nhớ?**<br><br>
+Giải quyết tốt hơn? chắc nhiều bạn sẽ hỏi câu này. Đúng đây bạn có cách tốt hơn thật, chúng ta nhìn vào đoạn code thấy quá là đơn giản kiểu gì mà có thể viết khác đi mà tốt hơn nhiều được có chăng chỉ là tí ít thôi. Vậy bây giờ hãy phân tích thử đối với vòng lập trên với dữ liệu mình cho, **&nbsp;sẽ có tổng cộng bao nhiêu lệnh gọi truy xuất bộ nhớ?**<br><br>
 Đối với mỗi vòng lặp, ta sẽ cần truy xuất bộ nhớ và lấy được giá trị của:
 
 * biến i
 * exampleObj
 * thuộc tính exArray
 * giá trị của thuộc tính exArray
-* thuộc tính ***&nbsplength*** của mảng exArray
+* thuộc tính ***&nbsp;length*** của mảng exArray
 
-Suy ra với mỗi vòng lặp ta cần 5 thao tác truy xuất bộ nhớ, ví dụ này mảng có 4 phần tử nên lặp cả thảy 5 lần thành ra tổng cộng **&nbsp25 lệnh truy xuất bộ nhớ**. Như phân tích trên ta thấy, thực chất mỗi lần lặp chỉ cần giá trị biến i và giá trị lengh của mảng là đủ vậy tại sao phải xét đến cả đóng kia chi cho phiền phức làm sao để cải tiến đây.<br><br>
+Suy ra với mỗi vòng lặp ta cần 5 thao tác truy xuất bộ nhớ, ví dụ này mảng có 4 phần tử nên lặp cả thảy 5 lần thành ra tổng cộng **&nbsp;25 lệnh truy xuất bộ nhớ**. Như phân tích trên ta thấy, thực chất mỗi lần lặp chỉ cần giá trị biến i và giá trị lengh của mảng là đủ vậy tại sao phải xét đến cả đóng kia chi cho phiền phức làm sao để cải tiến đây.<br><br>
 Đơn giản và hiệu quả nhất, ta dùng một biến tạm để lưu giá trị length của mảng:<br><br>
 ![Hình 2]({{ site.url }}/assets/media/2015-1-29-javascript-performance/2.png)<br><br>
 Đoạn code trên đây thì cần bao nhiêu lệnh truy xuất bộ nhớ?<br><br> 
-Trước khi bắt đầu lặp ta cần 1 lệnh tạo biến ***&nbsptemp*** trong bộ nhớ, 4 lệnh khác để truy xuất giá trị biến ***&nbsplength***<br><br>
+Trước khi bắt đầu lặp ta cần 1 lệnh tạo biến ***&nbsp;temp*** trong bộ nhớ, 4 lệnh khác để truy xuất giá trị biến ***&nbsp;length***<br><br>
 Đối với mỗi vòng lặp ta cần 2 lệnh tìm kiếm giá trị biến i và x, vậy cần 10 lệnh cho vòng lặp<br><br>
-Kết lại đối với đoạn code 2 khi chạy chương trình sẽ thực hiện tổng cộng **&nbsp15 lệnh truy xuất bộ nhớ**. So sánh với đoạn code 1 thì ta đã tiếm kiệm được 10 lệnh truy xuất bộ nhớ đối với mảng 4 phần tử. "Bỏ bèn có mỗi 10 lệnh :v", vậy nếu mảng có kích thước 1000 thì sao? Tính thử nào:
+Kết lại đối với đoạn code 2 khi chạy chương trình sẽ thực hiện tổng cộng **&nbsp;15 lệnh truy xuất bộ nhớ**. So sánh với đoạn code 1 thì ta đã tiếm kiệm được 10 lệnh truy xuất bộ nhớ đối với mảng 4 phần tử. "Bỏ bèn có mỗi 10 lệnh :v", vậy nếu mảng có kích thước 1000 thì sao? Tính thử nào:
 
 * code 1: 5 lệnh * (1000 lần lặp + 1 lần stop) = 5005 lệnh
 * code 2: 2 lệnh * (1000 lần lặp + 1 lần stop) + 5 lệnh tạo biến temp = 2007
