@@ -62,7 +62,24 @@ Thế là browser cứ đứng đó chờ hoài chờ mãi mà không load đư�
 Vì mặc định của browser là nó sẽ load trang html của ta từ trên xuống dưới tuần tự từng phần một, do đó trường hợp ta thất nghiệp có thể xảy ra. Để phòng xa con cá mập thì các bạn thấy là hầu hết các trang web đều để dòng lệnh load script ở cuối cùng của trang html, cái này như một quy chuẩn khi biết html vậy nhưng mà mình biết không nhiều bạn hiểu bản chất thâm xâu là vì cá mập đâu :)).<br><br>
 Ta nên đặt script như hình sau nhé:<br><br>
 ![Hình 4]({{ site.url }}/assets/media/2015-1-29-javascript-performance/4.png)<br><br>
-<h1>Some tips to improve performance</h1>
 
+<h1>Sử dụng Prototype khi khai báo class</h1>
+Phần này đơn giản là mình khuyên các bạn khi khai báo một class nên dùng prototype để khai báo các hàm cho class đó, không nên khai báo cái hàm trong constructer của class.<br><br>
+![Hình 5]({{ site.url }}/assets/media/2015-1-29-javascript-performance/5.png)<br><br>
+Như các bạn xem hình trên, nếu ta khai báo constructor như vậy thì cũng ổn thôi tạo ra đối tượng mới thì vẫn chạy tốt không bị lỗi gì cả. Nhưng mà hiệu năng của chương trình sẽ bị ảnh hưởng do phải **&nbsp;tốn thêm thời gian để tạo các phương thức và tốn thêm bộ nhớ để lưu trữ chúng**, đặc biệt là khi chúng ta có nhiều đối tượng thuộc cùng một class. Để cải tiến thì chúng ta nên làm như sau:<br><br>
+![Hình 6]({{ site.url }}/assets/media/2015-1-29-javascript-performance/6.png)<br><br>
+Kiểu khai báo class như trên sẽ giúp chúng ta tiết kiệm được tài nguyên làm chương trình chạy nhanh hơn. Các phương thức sẽ chỉ được khởi tạo một lần duy nhất trong prototype, sau đó sẽ được gọi bởi các đối tượng chứ không phải mỗi đối tượng sẽ có cùng các phương thức giống nhau.<br><br>
+Thế rồi giờ đặt ra câu hỏi: vậy thế vẹo nào mà tạo ra cách khai báo hàm trong constructor làm gì cho thiên hạ phải mắc lỗi? cách khai báo tệ như vậy thì sao phải tạo ra?<br><br>
+Câu trả lời là có mục đích bạn à. Và đó là khi đối tượng của bạn có thuộc tính private, thì chỉ các hàm khai báo trong constructor mới có thể truy xuất các thuộc tính đó được thôi. Ví dụ như vầy:<br><br>
+![Hình 7]({{ site.url }}/assets/media/2015-1-29-javascript-performance/7.png)<br><br>
+Nói chung người ta đã tạo ra cái gì thì đều có lý do, cả hợp lí và ngược lại vậy nên mới có lỗi lầm, trường hợp này thì là hợp lý. Chúng ta nên tìm hiểu khi có cái gì đó bất hợp lý hay có nhiều hơn 1 cách thực hiện cho 1 việc thì chắc là phải có gì đó mà ta chưa biết, đó là cách ổn nhất khi học cái mới nhưng mà tất nhiên là phải đảm bảo thời gian nhé không có thời gian thì thôi cứ quơ lại có demo là được rồi như lúc code final project nè :v. 
 
+<h1>Dùng Fragment khi tạo nhiều thẻ HTML</h1>
+![Hình 8]({{ site.url }}/assets/media/2015-1-29-javascript-performance/8.png)<br><br>
+Hình trên ta có một đoạn code có khả năng thêm các phần tử trong mảng newItems vào trang html tạo tag có id listExample. Đoạn code trên hình mình code đúng có thể chạy tốt thực hiện được chức năng đặt ra, nhưng mà chưa có chuẩn bởi vì trong vòng for mỗi lần ta gọi hàm appendChild để thêm một tag mới trang html sẽ "reflow" - mình hiểu đây là quá trình nó xác định vị trí các tag, rồi sau đó thêm tag mới vào, render lại ... - đây là quá trình khá tốn kém tài nguyên, nó làm chậm trang web của chúng ta. Bởi thế người ta tạo ra một giải phát mới là dùng một mảnh fragment, đây có thể xem là một DOM ảo để ta thao tác tạo ra những gì cần thiết rồi mới truy xuất trang html và thêm vào, như vậy trang html sẽ chỉ phải "reflow" một lần duy nhất thôi rất là tiết kiệm. Cách dùng như ví dụ dưới đây:<br><br>
+![Hình 9]({{ site.url }}/assets/media/2015-1-29-javascript-performance/9.png)<br><br>
+À các bạn để ý đoạn code trên mình không chỉ dùng fragment để nâng cao hiệu năng mà còn một vài tip như mình **&nbsp;giảm tối đa số lần dùng var để khai báo biến**, dùng var quá nhiều cũng sẽ làm chậm trang web. Và cũng **&nbsp;không nên khai báo biến trong vòng for**, vì mỗi lần lặp lại khai báo biến mới cũng sẽ làm chậm trang web.
 
+**Tham khảo:**
+
+* Javascript Best Practices
