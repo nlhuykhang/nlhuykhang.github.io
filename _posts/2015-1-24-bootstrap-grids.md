@@ -6,8 +6,6 @@ tags: [bootstrap, grid]
 fullview: true
 ---
 
-Updating...
-
 **Nội dung:**
 
 * <a href="#intro">**Sơ lược về Bootstrap**</a>

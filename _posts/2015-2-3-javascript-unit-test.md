@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Javascript - Cách tạo unit test
+title: Javascript - Kiểm tra hiệu năng
 categories: [tip, web, javascript]
-tags: [javascript, unit test]
+tags: [javascript, unit test, performance]
 published: false
 fullview: true
 ---
