@@ -30,5 +30,6 @@ rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
 url: http://nlhuykhang.github.io/
+excerpt_separator: ""
 
 BASE_PATH:
