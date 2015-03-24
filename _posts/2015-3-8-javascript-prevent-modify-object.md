@@ -38,7 +38,7 @@ Cấp Seal: Object.seal() và Object.isSeal()
 {% highlight html linenos %}
 ...
 Object.seal(person);
-
+   
 Object.isExtensible(person);		//false
 Object.isSeal(person);				//true
 

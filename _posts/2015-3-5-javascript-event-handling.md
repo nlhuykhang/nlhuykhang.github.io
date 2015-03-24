@@ -71,7 +71,7 @@ var handleClick = function(event) {
 	event.stopPropagation();
 	showPopup(event.clientX, event.clientY);
 }
-
+  
 addListener(element, 'click', handleClick);
 ...
 {% endhighlight %} 

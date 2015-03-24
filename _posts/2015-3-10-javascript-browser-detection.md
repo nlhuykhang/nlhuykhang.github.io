@@ -8,7 +8,7 @@ fullview: true
 ---
 
 <h3>User-Agent detection</h3>
-Mọi browser đều có user-agent string để xác định cho thằng khác biết, cụ thể là server và client, bản thân là tên chi cha mẹ là ai nhà ở đâu để cho người ta còn biết mà đối đải, như mình thì đối đải với anh M$ cẩn trọng lắm :v.<br>
+Mọi browser đều có user-agent string để xác định cho thằng khác biết, cụ thể là server và client, bản thân là tên chi cha mẹ là ai nhà ở đâu để cho người ta còn biết mà đối đải, như mình thì đối đải với anh M$ cẩn trọng lắm :v.<br>  
 Cú pháp: không biết server thế nào, mà hình như backend chẳng thằng nào thèm đếm xỉa chỉ client frontend là mình lo thôi. Frontend thì detect thế này: <strong>&nbsp;navigator.userAgent</strong>. Nhưng mà cách này có nhiều nhược điểm vì kết quả trả về là string nên trước hết phải parse rồi kiểm tra rồi còn ba thứ hầm bà lằng về version của browser hay nếu browser update có code mới thì code cũng phải update lại mà update vì code của mình còn mệt huống chi vì code của thằng khác => đây là cách cuối cùng nên dùng.<br>
 <h3>Feature detection</h3>
 Này là gì quên rồi ta, hình như là cái nào có thì dùng. Là trước khi dùng bất kì thuộc tính hay hàm nào thì kiểm tra nếu nó có tồn tại thì dùng không thì thôi. Kết quả không bị lỗi khi dùng cách này, tức là code sẽ chạy được nhưng mà cũng có nhược điểm vì khi cần qua mặt PM nếu mà PM test browser cũ hơn mà mình chưa cover đến nó thì vỡ mồm. Phải biết các hàm cho từng browser cụ thể thì mới sống qua ngày được, phiền thật.<br>

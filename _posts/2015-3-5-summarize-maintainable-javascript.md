@@ -6,7 +6,7 @@ tags: [javascript, summarize]
 published: false
 fullview: true
 ---
-
+ 
 updaing...
 Ngắn gọn thôi nào, chưa hiểu nhiều thì không nên viết nhiều
 
