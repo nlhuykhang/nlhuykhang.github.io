@@ -48,15 +48,19 @@ var handleClick = function(event) {
 addListener(element, 'click', handleClick);
 ...
 {% endhighlight %} 
+
 Với đoạn code này ta có thể dễ dàng thực hiện việc show popup một lần nữa ở đâu mà ta thích ta cũng có thể kiểm thử tính đúng đắn của hàm showPopup mà không cần phải tạo ra sự kiện click chuột. 
 
 <h3>Do not pass the event object around</h3>
+
  Sau khi tách hàm, đoạn code trở nên đẹp hơn và dễ phát triển hơn trong quá trình sống của ứng dụng như thế là chưa đủ, ta vẫn đang có vấn đề với đối tượng sự kiện event. Vấn đề ở đây là hàm xử lý logic nhận vào biến event, việc này tạo ra những khó khăn trong việc nhận biết chức năng của hàm lẫn việc test chức năng của hàm. <br><br>
  Bây giờ ta thử đổi tên hàm showPopup thành abcPopup, hàm này vẫn nhận tham số duy nhất là event bạn nghĩ nếu người khác nhìn vào có chắc sẽ biết được chức năng của hàm này là gì không. Đây chỉ là trong trường hợp đoạn code bé xí thôi nếu trong trong một project thực sự lớn cho dù tên hàm của bạn có đặt cho cố sát nghĩa thì vẫn rất khó cho người khác có thể đoán được chức năng của hàm này là gì. <br><br>
  Tóm lại cách truyền tham số thế này tạo ra sự nhập nhằng, mù mờ về chức năng của hàm, đồng ý là cho dù đặt tên đúng và truyền tham số chuẩn hơn như là chỉ truyền toạn độ x và y cần dùng thôi thì chưa chắc người khác đã hiểu chức năng hàm của bạn nhưng mà nó vẫn tốt hơn chứ nhỉ.<br><br>
  Một vấn đề khác là truyền biến event vào hàm thì khi bạn cần kiếm tra tính đúng đắn của hàm thì phải tạo ra một biến event khác để truyền vào, thành ra là phải hiểu hàm cần những thuộc tính nào để tạo ra một đối tượng bao gồm các thuộc tính đó rồi truyền vào còn không thì phải trigger sự kiện bằng cách nào đó -> lại phiền. Nếu hàm chỉ cần có 2 tham số x và y có phải dễ hơn không, ta chỉ cần truyền 2 số tọa độ x và y vào là có thể kiểm thử hàm ngay ngon lành cành đào.<br><br>
  Nguyên tác cuối cùng khi xử lý sự kiện là hàm xử lý sự kiện nên thực hiện tất cả lệnh liên quan đến biến event trước khi gọi hàm để xử lý logic. Nên các hành động như là preventDefault hay stopPropagation nên được gọi trong hàm xử lý sự kiện nếu cần thiết trước khi logic sự kiện xảy ra. Việc làm này giúp ta quản lý sự kiện tốt hơn, dễ debug hơn, dễ test hơn, dễ phát triển ứng dụng hơn, nói chung theo chiều hướng tốt thì cái gì cũng dễ hơn :3<br><br>
  Do đó đoạn code tiếp tục tiến hóa thêm 1 bước nữa, có thể gọi là siêu tiến hóa và trở thành thế này:
+ <br>
+
 {% highlight html linenos %}
 ...
 var showPopup = function(x, y) {
@@ -76,3 +80,4 @@ addListener(element, 'click', handleClick);
 ...
 {% endhighlight %}
 
+what is the problem here? post can not be end with a block code?
