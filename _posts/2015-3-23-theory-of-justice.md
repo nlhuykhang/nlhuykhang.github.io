@@ -1,3 +1,13 @@
+---
+layout: post
+title: Javascript - Summarizing "Maintainable Javascript"
+categories: [web, javascript, book]
+tags: [javascript, summarize]
+published: false
+fullview: true
+---
+
+
 nguyên lý cơ bản rất giản dị và tỏ tường: cái gì hợp lý cho tất cả thì cũng công bằng! và một xã hội được những con người tự do và bình đẳng tạo lập sẽ là một xã hội hợp lý và công bằng.
 
 công bằng và hợp lý đâu phải là động lực thực sự của con người
