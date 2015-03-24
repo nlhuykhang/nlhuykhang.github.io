@@ -12,7 +12,7 @@ Này thì quen quá rồi ai đã từng đụng vào js bất kể nền tảng
 Quen thuộc là thế nhưng thật ra rất nhiều coder đang có cách đối xử với đối tượng event này không ổn cho lắm, thật ra thì code vẫn chạy tốt thôi, nhưng khi đặt vào môi trường chuyên nghiệp đặc biệt là đối với các project lớn được phát triển bới nhiều coder hoặc thậm chí là nhiều công ty khác nhau, thì cách đối xử này có thể là ác mộng của coder.<br><br>
 Ví dụ đoạn code sau ta hãy cùng xem và nghĩ thử vấn đề gì có thể xảy ra với đoạn code này, không phải vấn đề về chức năng nhé đoạn code này hoàn toàn ổn khi làm công việc của nó:
 <br>
-{% highlight html linenos %}
+<!-- {% highlight html linenos %}
 ...
 function handleClick(event){
 	var popup = document.getElementById('popup');
@@ -24,6 +24,7 @@ function handleClick(event){
 addListener(element, 'click', handleClick);
 ...
 {% endhighlight %} 
+ -->
 <br>
 Đoạn code trên đơn giản là show một cái popup tại vị trí nhập chuột của người dùng, vậy vấn đề gì có thể với một đoạn code đơn giản như này?<br>
 
@@ -32,7 +33,7 @@ Nếu bạn muốn show popup tương tự nhưng ở vị trí bất kì không
 Vấn đề đoạn code trên đang mắc phải là nó xử lý logic của sự kiện trong hàm bắt sự kiện, cách xử lý này có thể tạo ra một vài các phiền toái như việc lập code vừa nêu ở trên. Vấn đề nữa chắc chắn sẽ xảy ra khi bạn cần test thử logic ứng dụng của mình đã chuẩn chưa trong trường hợp đó do code xử lý logic đang nằm trong hàm xử lý sự kiện vậy để test ta phải trigger được sự kiện bằng cách trực tiếp hay gián tiếp nào đó cụ thể ở đây là click chuột. Như thế rất phiền toát chẳng dư hơi nhiều đến mức chạy server lên chỉ để test một đoạn code logic có 3 dòng.<br>
 Vậy nên để giải quyết vấn đề này ta luôn luôn nên tách biệt code xử lý logic của sự kiện và code bắt sự kiện, làm thế ta sẽ cơ bản giải quyết được các vấn đề trên từ lập code đến kiểm thử. Đoạn code sẽ tiến hóa thành:
 
-{% highlight html linenos %}
+<!-- {% highlight html linenos %}
 ...
 var showPopup = function(event) {
 	var popup = document.getElementById('popup');
@@ -48,7 +49,7 @@ var handleClick = function(event) {
 addListener(element, 'click', handleClick);
 ...
 {% endhighlight %} 
-
+ -->
 Với đoạn code này ta có thể dễ dàng thực hiện việc show popup một lần nữa ở đâu mà ta thích ta cũng có thể kiểm thử tính đúng đắn của hàm showPopup mà không cần phải tạo ra sự kiện click chuột. 
 
 <h3>Do not pass the event object around</h3>
@@ -60,7 +61,7 @@ Với đoạn code này ta có thể dễ dàng thực hiện việc show popup 
  Nguyên tác cuối cùng khi xử lý sự kiện là hàm xử lý sự kiện nên thực hiện tất cả lệnh liên quan đến biến event trước khi gọi hàm để xử lý logic. Nên các hành động như là preventDefault hay stopPropagation nên được gọi trong hàm xử lý sự kiện nếu cần thiết trước khi logic sự kiện xảy ra. Việc làm này giúp ta quản lý sự kiện tốt hơn, dễ debug hơn, dễ test hơn, dễ phát triển ứng dụng hơn, nói chung theo chiều hướng tốt thì cái gì cũng dễ hơn :3<br><br>
  Do đó đoạn code tiếp tục tiến hóa thêm 1 bước nữa, có thể gọi là siêu tiến hóa và trở thành thế này:
  <br>
-
+<!-- 
 {% highlight html linenos %}
 ...
 var showPopup = function(x, y) {
@@ -79,5 +80,5 @@ var handleClick = function(event) {
 addListener(element, 'click', handleClick);
 ...
 {% endhighlight %}
-
+ -->
 what is the problem here? post can not be end with a block code?
