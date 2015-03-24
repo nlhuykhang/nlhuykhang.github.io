@@ -3,7 +3,7 @@ layout: post
 title: Maintainable Javascript - Event handling
 categories: [web, javascript, book]
 tags: [javascript, summarize, maintainable javascript]
-published: true
+published: false
 fullview: true
 ---
 
