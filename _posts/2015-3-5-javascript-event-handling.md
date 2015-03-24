@@ -81,4 +81,11 @@ addListener(element, 'click', handleClick);
 ...
 {% endhighlight %}
  -->
+
+{% highlight %}
+...
+addListener(element, 'click', handleClick);
+...
+{% endhighlight %}
+
 what is the problem here? post can not be end with a block code?
