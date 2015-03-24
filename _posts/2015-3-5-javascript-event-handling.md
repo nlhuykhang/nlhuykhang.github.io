@@ -57,7 +57,7 @@ Với đoạn code này ta có thể dễ dàng thực hiện việc show popup 
  Một vấn đề khác là truyền biến event vào hàm thì khi bạn cần kiếm tra tính đúng đắn của hàm thì phải tạo ra một biến event khác để truyền vào, thành ra là phải hiểu hàm cần những thuộc tính nào để tạo ra một đối tượng bao gồm các thuộc tính đó rồi truyền vào còn không thì phải trigger sự kiện bằng cách nào đó -> lại phiền. Nếu hàm chỉ cần có 2 tham số x và y có phải dễ hơn không, ta chỉ cần truyền 2 số tọa độ x và y vào là có thể kiểm thử hàm ngay ngon lành cành đào.<br><br>
  Nguyên tác cuối cùng khi xử lý sự kiện là hàm xử lý sự kiện nên thực hiện tất cả lệnh liên quan đến biến event trước khi gọi hàm để xử lý logic. Nên các hành động như là preventDefault hay stopPropagation nên được gọi trong hàm xử lý sự kiện nếu cần thiết trước khi logic sự kiện xảy ra. Việc làm này giúp ta quản lý sự kiện tốt hơn, dễ debug hơn, dễ test hơn, dễ phát triển ứng dụng hơn, nói chung theo chiều hướng tốt thì cái gì cũng dễ hơn :3<br><br>
  Do đó đoạn code tiếp tục tiến hóa thêm 1 bước nữa, có thể gọi là siêu tiến hóa và trở thành thế này:
- {% highlight html linenos %}
+{% highlight html linenos %}
 ...
 var showPopup = function(x, y) {
 	var popup = document.getElementById('popup');
@@ -74,5 +74,5 @@ var handleClick = function(event) {
   
 addListener(element, 'click', handleClick);
 ...
-{% endhighlight %} 
+{% endhighlight %}
 
