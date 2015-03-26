@@ -3,7 +3,7 @@ layout: post
 title: Nội soi cung hoàng đạo - thầy bói thời hiện đại
 categories: [perception, criticism, psychology, critical thinking]
 tags: [comfirmation bias, zodiac, astrology, forer effect]
-published: true
+published: false
 fullview: true
 ---
 

@@ -39,7 +39,7 @@ Liên hệ bản thân thì mình thấy điều đó rất đúng, nếu thực
 Đó là lý do mà ta sẽ không bao giờ có được một xã hội lý tưởng kiểu Rawls, lý tưởng vì cái ý tưởng về công bằng rất là mĩ miều và phần nào trong mỗi chúng ta đều biết là rồi sẽ có lúc hoặc đã có lúc trong đời bản thân là là người chịu thiệt cần có công bằng. 
 <br><br>
 
-<h2>Đường thẳng hoàng kim<h2>
+<h2>Đường thẳng hoàng kim</h2>
 
 Cái mình thích ở Rawls chính là ý tưởng của ông về một xã hội công bằng như thế, dù biết là nó không bao giờ có thể xảy ra. Mình có phần rất giống Rawls là rất thích ý tưởng này một xã hội như thế nếu hiện hữu thì tốt đẹp biết bao và mình cũng thường làm nhiều việc để hướng đến cái xã hội đó, nhưng mình thực tế hơn Rawls hoặc là không đủ trình để suy nghĩ khác đi như ông để thấy rằng điều đó là không thể. 
 <br><br>
