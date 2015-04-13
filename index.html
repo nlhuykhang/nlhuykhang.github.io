@@ -53,7 +53,8 @@ tagline:
 
   <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
   <div>
-    {{ post.excerpt }}
+    {% if post.content contains '<!--more-->' %}
+    {{ post.content | split:'<!--more-->' | first }}
   </div>
 </article>
 {% endfor %}
