@@ -53,11 +53,7 @@ tagline:
 
   <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
   <div>
-    {% if post.content contains '<!--more-->' %}
     {{ post.excerpt }}
-    {% else %}
-    <!-- Case for when no excerpt is defined -->
-    {% endif %}
   </div>
 </article>
 {% endfor %}
