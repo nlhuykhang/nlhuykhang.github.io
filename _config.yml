@@ -31,7 +31,6 @@ categories_path: categories.html
 tags_path: tags.html
 about_path: about.html
 url: http://nlhuykhang.github.io/
-# excerpt_separator: <!--excerpt-->
-excerpt_separator: ""
+excerpt_separator: <!--more-->
 
 BASE_PATH:

@@ -52,17 +52,9 @@ tagline:
   </span>
 
   <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-  <div>
-    {% if post.content contains '<!--excerpt-->' %}
   
-      {{ post.content | split:'<!--excerpt-->' | first }}
+  {{ post.excerpt }}
 
-    {% else %}
-
-      <!-- {{ post.content }} -->
-      
-    {% endif %}
-  </div>
 </article>
 {% endfor %}
 <hr/>
