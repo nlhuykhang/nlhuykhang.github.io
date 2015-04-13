@@ -3,7 +3,6 @@ layout: post
 title: Lý thuyết về công bằng của John Rawls - tại sao xã hội không công bằng?
 categories: [perception, life, book, review]
 tags: [justice, john rawls, who am i]
-excerpt_separator: <!--more-->
 published: true
 fullview: true
 ---
