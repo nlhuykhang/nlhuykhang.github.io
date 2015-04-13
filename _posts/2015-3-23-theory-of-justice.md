@@ -9,7 +9,6 @@ fullview: true
 
 Đọc được cái lý thuyết này trong chương kế cuối của quyển Tôi là ai?. Đến thời điểm quyết định viết post này thì đã đọc xong hết quyển đó hơn 2 lần và chường về công bằng này là hơn 3 lần, mà ế hiểu cái vẹo gì hết ức chế quá mới hạ quyết tâm phải viết vài ba cái review về cuốn sách quái đảng đó với hi vọng không bỏ thời gian để đọc mà xong thì chẳng hiểu gì chẳng biết gì thành ra công cốc. Hi vọng viết ra sẽ giúp mình nhớ được hay may hơn hiểu được tí gì đó.
 
-<!--more-->
 
 <h2>Thế giới công bằng của Rawls</h2>
 
