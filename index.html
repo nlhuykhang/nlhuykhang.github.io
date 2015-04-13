@@ -5,7 +5,7 @@ tagline:
 
 {% for post in paginator.posts %}
 
-<article class="home">
+<!-- <article class="home">
 
   <span class="post-date">
     {% assign d = post.date | date: "%d" | plus:'0' %}
@@ -37,6 +37,21 @@ tagline:
     {% endif %}
   </div>
 
+</article> -->
+<article class="home">
+  <span class="post-date">
+    {% assign d = post.date | date: "%d" | plus:'0' %}
+    {{ post.date | date: "%B" }}
+    {% case d %}
+    {% when 1 or 21 or 31 %}{{ d }}st,
+    {% when 2 or 22 %}{{ d }}nd,
+    {% when 3 or 23 %}{{ d }}rd,
+    {% else %}{{ d }}th,
+    {% endcase %}
+    {{ post.date | date: "%Y" }}
+  </span>
+  
+  <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
 </article>
 {% endfor %}
 <hr/>
