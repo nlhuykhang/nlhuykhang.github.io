@@ -8,7 +8,9 @@ fullview: true
 ---
 
 Đọc được cái lý thuyết này trong chương kế cuối của quyển Tôi là ai?. Đến thời điểm quyết định viết post này thì đã đọc xong hết quyển đó hơn 2 lần và chường về công bằng này là hơn 3 lần, mà ế hiểu cái vẹo gì hết ức chế quá mới hạ quyết tâm phải viết vài ba cái review về cuốn sách quái đảng đó với hi vọng không bỏ thời gian để đọc mà xong thì chẳng hiểu gì chẳng biết gì thành ra công cốc. Hi vọng viết ra sẽ giúp mình nhớ được hay may hơn hiểu được tí gì đó.
+
 <!--more-->
+
 <h2>Thế giới công bằng của Rawls</h2>
 
 John Rawls là triết gia nổi tiếng của Mỹ sống đâu thế kỉ XX thì phải, đời ông có nhiều điều rất là lí thú mà kể ra đây thì hầm bà lằng dài dòng mà chẳng để làm gì nên thôi. Chủ yếu nên biết ông là tác giả của Lý thuyết về Công bằng(Theory of Justice), đây là thành tựu lớn nhất trong đời ông dựa theo thang đo những thứ giúp ông nổi tiếng, còn ông thật sự nghĩ sao thì bố thằng nào biết. Trong lý thuyết đó ông đề xuất mô hình xã hội dạng như sau đây:
