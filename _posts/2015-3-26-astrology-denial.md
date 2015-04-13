@@ -7,7 +7,7 @@ published: false
 fullview: true
 ---
 
-Sau cả một tràng dài phân tích nếu không phải cải nhau tiếp vì đối phương đã quá đuối thì mình thường nghe câu ngang phè thế này: "zời, vui thôi mà có cái để tin cũng tốt có hại gì đâu :)". Vãi cả có hại gì đâu :)) nghe mà hài chết được nếu hồi còn trẻ hơn là mình hùng hổ tông vào chửi cho một trận rồi. Nếu không có hại gì thì cớ chi mình phải bỏ thời gian tốn nước bọt mà phân tích trắng đen không biết(thiệt ra để phát triển trình cải nhau với suy nghĩ phản biện có trọng lượng rất lớn :3).
+Sau cả một tràng dài phân tích nếu không phải cải nhau tiếp vì đối phương đã quá đuối lý thì mình thường nghe câu ngang phè thế này: "zời, vui thôi mà có cái để tin cũng tốt có hại gì đâu :)". Vãi cả có hại gì đâu :)) nghe mà hài chết được nếu hồi còn trẻ hơn là mình hùng hổ tông vào chửi cho một trận rồi. Nếu không có hại gì thì cớ chi mình phải bỏ thời gian tốn nước bọt mà phân tích trắng đen không biết(thiệt ra để phát triển trình cải nhau với suy nghĩ phản biện có trọng lượng rất lớn :3).
 
 <h2>Niềm tin vào định mệnh không có thật</h2>
 Dựa vào cung hoàng đạo bạn dễ dàng biết được tương lai của mình định mệnh của mình thông qua cung của mình. Như là bạn nên học ngành gì thì hợp, làm việc gì thì thành công, quan hệ với bạn nào thì thuận lợi, chồng/vợ tượng lai của bạn cung gì thì có thể hạnh phúc. 

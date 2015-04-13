@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lý thuyết về công bằng của John Rawls - tại sao xã hội không công bằng?
-categories: [perception, life, book]
+categories: [perception, life, book, review]
 tags: [justice, john rawls, who am i]
 published: true
 fullview: true
@@ -19,6 +19,7 @@ Tất nhiên mọi người sẽ đưa ra luật lệ để đảm bảo các nh
 
 * Tất cả đều có quyết tự do cơ bản. Quyết tự do của cá thể chỉ có thể bị hạn chế bởi nhu cầu củng cố quyền tự do của những người khác
 * Nếu có bất bình đẳng xã hội và kinh tế thì chúng phải có các tính chất sau:
+
 ** Sự phồn vinh đạt được phải đem lại lợi ích lớn nhất như có thể cho người được hưởng ít nhất
 ** Phải bảo đảm bình đẳng về cơ hội lớp lý. Về nguyên tắc, tất cả của cải là dành cho tất cả mọi người
 
