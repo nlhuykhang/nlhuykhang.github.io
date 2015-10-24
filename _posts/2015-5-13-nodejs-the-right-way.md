@@ -7,4 +7,7 @@ published: false
 fullview: true
 ---
 
-updating...
+
+
+I/O-bound programs are constrained by data access. These are programs
+where adding more processing power or RAM often makes little difference.

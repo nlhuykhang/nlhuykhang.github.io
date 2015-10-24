@@ -10,6 +10,7 @@ fullview: true
 updating...
 
 Avoid double evaluation
+
 Use object/array literals
     function addHandler(target, eventType, handler){
          if (target.addEventListener){ //DOM2 Events
