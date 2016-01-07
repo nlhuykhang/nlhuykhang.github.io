@@ -311,6 +311,8 @@ _.chain(obj)
 
 _.value()
 
+_.times(10, function(){});  //loop 10 times, generate 10-items array
+
 <h2>useraccounts:iron-routing</h2>
 
 <h2>Search with MongoDB</h2>
@@ -372,8 +374,109 @@ Full Test Search:
 <h2>Meteor External script</h2>
   Load inside render events
   $().after() a hold script element
+  $.getScript() may be better
 
 <h2>Tracker</h2>
 Use .equals in preference to .get
 
+<h2>Event handler</h2>
+This one is really good knowdelge. Actually I have faced this problem before but this morning I did not remember it till I saw the code. It is really a wake up call for me. I do not write and review notes often these days fuck me -_-. This is what I shoudl always have done every days, what I good habit I am going to regain this habit right now. Start now go babe
+
+let eventHandler = function(e, arg){
+  doSth(this, e, arg);
+};
+
+{
+  let this_of_this_scope = this;
+  el.on('event', (function(arg){
+    return function(e){
+      eventHandler.call(this, e, arg);
+    };
+  })(this_of_this_scope));  
+}
+
+<h2>Meteor publication with aggregation</h2>
+This one is specific for the situation when you need a complex aggregation(with count) for a DPP CLIENT - NOT METEOR CLIENT
+
+Meteor.publish('name', function(){
+  let sub = this;
+  sub.ids = [];
+  sub.added('counts', 'collectionName', {count: 0});
+
+  Tracker.autorun( () => {
+    let collections = Collections.find().fetch();
+    let newIds = underscore(collections).pluck('id');
+
+    sub.changed('counts', 'collectionName', collections.lenght);
+
+    collections.forEach((doc) => {
+      if(sub.ids.indexOf(doc.id) === -1){
+        sub.ids.push(doc.id);
+        sub.added('collections', doc.id, doc);
+      } else {
+        if(isChanged){
+          sub.changed('collections', doc.id, doc);
+        }
+      }
+    });
+
+    underscore(sub.ids).difference(newIds).forEach( (id) => {
+      sub.removed('collections', id);
+    });
+
+  });
+
+  sub.ready();
+});
+
+<h2>Blaze Component</h2>
+
+{{> template args 'param1' 'param2'}}
+
+Neu ma khai bao template binh thuong thi param se nam trong onCreated. Neu khai bao theo kieu extend thi se nam trong constructor
+
+<h2>Way to extend prototype function </h2>
+
+Asteroid.prototype.subscribe = function(){};  //predefined
+
+Asteroid.prototype._subscribe_ = Asteroid.prototype.subscribe;
+
+Asteroid.prototype.subscribe = function(){
+  //do sth here, modify arguments etc
+  return Asteroid.prototype._subscribe_.apply(this, arguments);
+};
+
+<h2>Simple schema</h2>
+defaultValue !== autoValue(this is a function)
+
+<h2>React</h2>
+
+defaultValue
+
+<h2>MUP</h2>
+To use meteor settings with mup: parse setting file to string, pass to server.env.METEOR_SETTINGS
+
 <h2></h2>
+
+To get the length of input. Use a hidden span (this has to be rendered already), set text of span to input value -> width of span is equal to width of value
+
+<h2>Email</h2>
+
+process.env.MAIL_URL = ''
+
+<h2>Iron:router</h2>
+To have something like: localhost:3000/username. You can use this configure:
+  this.route('name', {path: '/:username'});
+It will act normal with other fixed routes
+
+
+<h2>Asteroid</h2>
+After subscribe is ready, data will be sent to client one-by-one, e.g. it likes a sync process item 1 comes then item 2 comes
+
+Problem of this: .on('change', cb) will be executed many times
+
+I am not sure about this
+
+- how is it different with the normal meteor subscribe?
+- do they act in the same manner? or normal version will fetch all data at once?
+- is it because the localhost is too fast to realize it?
