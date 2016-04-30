@@ -3,7 +3,7 @@
 paginate: 10 # pagination based on number of posts
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 
 
@@ -23,7 +23,7 @@ author:
   pinterest: nlhuykhang
   linkedin: nlhuykhang
   facebook: nlhuykhang
-  bio: I'm Khang - coder, reader, student, passioner, geek, kid - nice to see you here. 
+  bio: I'm Khang - coder, reader, learner, passioner, geek, kid - nice to see you here.
   email_md5: 726351295ec82e145928582f595aa3aa
 
 rss_path: feed.xml
