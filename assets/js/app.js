@@ -16,5 +16,15 @@ $(document).ready(function() {
   contact_list.mouseleave(function() {
     scontacts.fadeOut();
   });
-	
+
+  switch (Math.ceil( Math.random() * 2)) {
+    case 1:
+      initLightExplosion();
+      break;
+    case 2:
+      tentacleInit();
+      break;
+    default:
+      tentacleInit();
+  }
 });
