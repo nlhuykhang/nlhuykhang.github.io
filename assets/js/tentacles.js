@@ -24,15 +24,15 @@
 var settings = {
     interactive: false,
     darkTheme: true,
-    headRadius: 10,
-    thickness: 1,
-    tentacles: 100,
+    headRadius: 7,
+    thickness: 3,
+    tentacles: 40,
     friction: 0,
-    gravity: 3,
+    gravity: 0.5,
     colour: { h:0, s:0, v:1 },
-    length: 34,
+    length: 30,
     pulse: true,
-    wind: -3,
+    wind: 0,
 };
 
 var utils = {
