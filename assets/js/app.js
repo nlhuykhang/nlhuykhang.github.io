@@ -17,13 +17,16 @@ $(document).ready(function() {
     scontacts.fadeOut();
   });
 
-  switch (Math.ceil( Math.random() * 2)) {
+  switch (Math.ceil( Math.random() * 3)) {
     case 1:
       initLightExplosion();
       break;
     case 2:
       tentacleInit();
       break;
+		case 3:
+			initPlasmatic();
+			break;
     default:
       tentacleInit();
   }
