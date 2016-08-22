@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Meteor Deep Dive: Reactive Programming With Tracker
+title: Meteor Deep Dive - Reactive Programming With Tracker
 categories: [javascript, framework]
 tags: [tech, meteor, deepdive]
 published: true
@@ -31,7 +31,8 @@ Blaze's helpers are reactive natively because they use Tracker inside, if you pu
 
 Let's read some code and behold what I am talking about, if you are already familiar with Tracker, keep this part and move to the next section to inspect the magic.
 
-```
+```javascript
+
 // Set up the reactive code
 const counter1 = new ReactiveVar(0);
 const counter2 = new ReactiveVar(0);
@@ -71,6 +72,7 @@ counter1.set(7);
 Message on the console:
 Counter1 is now: 7
 */
+
 ```
 
 In reality, it happens as shown below:
@@ -88,12 +90,17 @@ Basically Tracker is a simple interface that lets reactive data sources (like *c
 Okay, that is easy to say but how does it happen?
 
 Let look at the code:
-```
+
+```javascript
+
   const counter = new ReactiveVar(1);
+
   const f = function() {
     console.log(counter.get());
   };
+
   Tracker.autorun(f);
+
 ```
 
 In the above code: counter is our reactive data source, the problem here is that how can it know what function it is used inside to add that function as its dependent.
@@ -102,7 +109,8 @@ This is where the Meteor team does their trick to make this flow transparent. In
 
 In an traditional implementation of Observer, we can think of F as an observer and R as a subject. R must have an interface to add F as its observer and notify/run F when its value changes. Something like this:
 
-```
+```javascript
+
   const counter = new Source();
 
   const f = function(val) {
@@ -115,19 +123,17 @@ In an traditional implementation of Observer, we can think of F as an observer a
 
 To imitate this, Tracker provide us these interface:
 
-  Tracker.autorun
-
-  Tracker.Dependency
-
-  Tracker.Dependency.prototype.depend
-
-  Tracker.Dependency.prototype.changed
+  + Tracker.autorun
+  + Tracker.Dependency
+  + Tracker.Dependency.prototype.depend
+  + Tracker.Dependency.prototype.changed
 
 Tracker.Dependency is the implementation of Subject in traditional Observer. All of reactive data source to use with Tracker use this object inside.
 
 Let look at the basic implementation of ReactiveVar I use for examples above:
 
-```
+```javascript
+
   ReactiveVar = function (initialValue, equalsFunc) {
     if (! (this instanceof ReactiveVar))
       // called without `new`
@@ -163,7 +169,9 @@ So when we create a new instance of ReactiveVar, a Tracker.Dependency object wil
 This is the Tracker's flow with more details:
 
 Tracker.autorun will create a computation with the function (F) pass to it as the computation's props.
-```
+
+```javascript
+
   // https://github.com/meteor/meteor/blob/devel/packages/tracker/tracker.js#L569-L585
   Tracker.autorun = function(f, options) {
     // ...
@@ -173,11 +181,13 @@ Tracker.autorun will create a computation with the function (F) pass to it as th
 
     return c;
   };
+
 ```
 
 When being initiated, this computation is also set as the current computation inside a "global" variable named Tracker.currentComputation. And F will be run for for first time.
 
-```
+```javascript
+
   // https://github.com/meteor/meteor/blob/devel/packages/tracker/tracker.js#L146-L208
   Tracker.Computation = function(f, parent, onError) {
     // ...
@@ -223,7 +233,8 @@ When being initiated, this computation is also set as the current computation in
 
 If inside body of F there is a .get operation (meaning .depend), this function will be run and set the current computation stored in the global var named Tracker.currentComputation as it's dependent.
 
-```
+```javascript
+
   // https://github.com/meteor/meteor/blob/devel/packages/tracker/tracker.js#L403-L420
   Tracker.Dependency.prototype.depend = function(computation) {
     if (!computation) {
@@ -240,17 +251,20 @@ If inside body of F there is a .get operation (meaning .depend), this function w
     }
     return false;
   };
+
 ```
 
 Then whenever .set is call (meaning .changed), F will be rerun
 
-```
+```javascript
+
   // https://github.com/meteor/meteor/blob/devel/packages/tracker/tracker.js#L428-L432
   Tracker.Dependency.prototype.changed = function() {
     var self = this;
     for (var id in self._dependentsById)
       self._dependentsById[id].invalidate();
   };
+
 ```
 
 Yeah so it is the basic idea. Beyond this basic flow actually there are some other important things to be take care for to have a complete production-ready Tracker library. I am not going to write about those things, instead I will just name them. And you can go and check yourself to really understand Tracker. They are:
