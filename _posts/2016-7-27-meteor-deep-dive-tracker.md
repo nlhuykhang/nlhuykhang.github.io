@@ -77,7 +77,7 @@ Counter1 is now: 7
 
 In reality, it happens as shown below:
 
-gif image of above code
+![Tracker]({{ site.url }}/assets/media/2016-7-27-meteor-deep-dive-tracker/tracker.gif)
 
 # How does Tracker work?
 
