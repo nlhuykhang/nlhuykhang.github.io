@@ -77,7 +77,7 @@ Counter1 is now: 7
 
 In reality, it happens as shown below:
 
-![Tracker](http://g.recordit.co/7R75MH7tXp.gif)
+![Tracker](https://0414032aa1cc5c948f1d94bc4c4e831cbbabf005.googledrive.com/host/0B-wsJdPXUTeIS1RELUFTLU13ckk/tracker.gif)
 
 # How does Tracker work?
 
