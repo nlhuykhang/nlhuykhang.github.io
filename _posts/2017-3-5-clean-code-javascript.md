@@ -202,3 +202,47 @@ function insertStudent(student) {
 insertStudent(student);
 
 ```
+
+### Functions should be small, named explicitly, and do only one thing
+
+```javascript
+
+// NOTE: dirty code
+
+function sendMail(email) {
+  // ...
+}
+
+function sendMailToCSStudents(studentList) {
+  for (let i = 0; i < studentList.length; i++) {
+    if (studentList[i].major === 'CS') {
+      sendMail(studentList[i].email);
+    }
+  }
+}
+
+```
+
+Look at two block of code above and below, which one is more readable for you? For me the later one is surely superior. Just be looking at the functions' names, I know what they do, and how they do without reading their body.
+
+```javascript
+
+// NOTE: clean code
+
+function sendMail(email) {
+  // ...
+}
+
+function isCSStudent(student) {
+  return student && student.major === 'CS';
+}
+
+function getEmail(student) {
+  return student && student.email;
+}
+
+function sendMailToCSStudents(studentList) {
+  studentList.filter(isCSStudent).map(getEmail).forEach(sendMail);
+}
+
+```
