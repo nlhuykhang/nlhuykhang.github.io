@@ -72,3 +72,97 @@ getUser();
 getPayment();
 
 ```
+
+### Use searchable and explanatory variable names
+
+```javascript
+
+// NOTE: dirty code
+
+const N = 1000;
+
+// hundred lines of code ...
+
+for (let i = 0; i < N; i++) {
+  // do something with i
+}
+
+```
+
+Now imagine you need to search for the value of constant `N` in the above code. Because `N` is a one-letter word so when searching for it you may come across many words containing the `n` letter. Therefore `N` is very un-searchable. Also just by looking at the code above, we have no idea what the value of `N` could mean, it will make it hard for developer to understand the code.
+
+Note: we usually use `i`, `j` as the incremental variables inside loops. This is due to the tradition of code (I guess), we all start will it. Anyways, that is fine if you only have a small loop block which could fit all in your editor view (do not have to scroll to read the whole block). When your loop block has more line, consider using another name of `i`, `j`.
+
+```javascript
+
+// NOTE: clean code
+
+const NUMBER_OF_ROWS = 1000;
+
+// hundred lines of code ...
+
+for (let i = 0; i < NUMBER_OF_ROWS; i++) {
+  // do something with i
+}
+
+```
+
+### Don't add unneeded context
+
+```javascript
+
+// NOTE: dirty code
+
+const student = {
+  studentName: 'Khang',
+  studentClass: 'CS',
+  studentAge: '23',
+};
+
+```
+
+The prefix `student` is clearly unneeded in this situation. Since those properties are already inside the `student` object.
+
+```javascript
+
+// NOTE: clean code
+
+const student = {
+  name: 'Khang',
+  class: 'CS',
+  age: '23',
+};
+
+```
+
+### Leverage short-circuiting
+
+```javascript
+
+// NOTE: dirty code
+
+function getName(person) {
+  if (person) {
+    if (person.name) {
+      return person.name;
+    } else {
+      return 'Noname';
+    }
+  } else {
+    return 'Noname';
+  }
+}
+
+```
+
+The code above is long and hard to read even though it is just used for a simple purpose that is to get `name` property of `person` object, and return `Noname` if `person` or `person.name` are missing. We could make this function much shorter and easier to read by using short-circuiting.
+
+```javascript
+
+// NOTE: clean code
+
+function getName(person) {
+  return (person && person.name) || 'Noname';
+}
+
+```
