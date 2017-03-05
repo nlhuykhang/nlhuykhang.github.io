@@ -203,7 +203,7 @@ insertStudent(student);
 
 ```
 
-### Functions should be small, named explicitly, and do only one thing
+### Functions should be small, named explicitly, and do only one thing (one level of abstraction)
 
 ```javascript
 
@@ -243,6 +243,217 @@ function getEmail(student) {
 
 function sendMailToCSStudents(studentList) {
   studentList.filter(isCSStudent).map(getEmail).forEach(sendMail);
+}
+
+```
+
+### Avoid side effects
+
+```javascript
+
+// NOTE: dirty code
+
+let counter = 1;
+
+function increaseCounter() {
+  counter++;
+}
+
+increaseCounter();
+
+console.log(counter);
+
+```
+
+The code above has two problems:
+
+- First, it assumes that reader knows what `counter` is, and where it comes from. If you are the author, it is likely that you know (really???). If you are a maintainer, good luck crawling thousands line of code to find what `counter` is and what modify it.
+- Second, it mutates a global values which may be used by other parts of the application. Let imagine you expect the value of `counter` equals to `1`, but surprisingly it is `2` because someone calls `increaseCounter` and changes the value of `counter`.
+
+```javascript
+
+// NOTE: clean code
+
+let counter = 1;
+
+function increaseCounter(counter) {
+  return counter + 1;
+}
+
+let newCounter = increaseCounter(counter);
+
+console.log(newCounter);
+
+```
+
+### Favor functional programming
+
+#### Immutable values
+
+```javascript
+
+// NOTE: dirty code
+
+const student = {
+  name: 'Khang',
+  age: '22',
+};
+
+function setStudentAge(student, age) {
+  student.age = age;
+}
+
+setStudentAge(student, 23);
+
+console.log(student.age);
+
+```
+
+In functional programming, variable values are immutable, it is believe to produce less bugs in your code. Therefore, the code above should be refactored like below:
+
+```javascript
+
+// NOTE: clean code
+
+const student = {
+  name: 'Khang',
+  age: '22',
+};
+
+function setStudentAge(student, newAge) {
+  return Object.assign({}, student, { age: newAge})
+}
+
+const newStudent = setStudentAge(student, 23);
+
+console.log(newStudent.age);
+
+```
+
+#### Declarative over imperative
+
+```javascript
+
+// NOTE: dirty code
+
+const students = [
+  {
+    name: 'Khang Nguyen-Le',
+    year: '4th',
+  },
+  // ...
+];
+
+function getSeniorStudentInitalsListName(studentList) {
+  const initialsList = [];
+
+  for (let i = 0; i < studentList.length; i++) {
+    const student = studentList[i];
+
+    if (student.year === '4th') {
+      let initial = '';
+      const splitName = student.name.split(' ');
+
+      for (let j = 0; j < splitName.length; j++) {
+        initial += splitName[j][0];
+      }
+
+      initialsList.push(initial);
+    }
+  }
+
+  return initialsList;
+}
+
+console.log(getSeniorStudentInitalsListName(students));
+
+```
+
+If you have never learned to code in a functional way, the code above is what you likely to write. It is imperative code, although it could do the job fine. There are some problems with imperative code
+
+- Hard to read and understand, do you know what `student.year === '4th'` mean?
+- Hard to test, you can only write test for the big function `getSeniorStudentInitalsListName`, not smaller blocks inside it
+- There are so many variables to keep track of
+
+To solve these problems, we could rewrite the above function in a declarative way:
+
+```javascript
+
+// NOTE: clean code
+
+const students = [
+  {
+    name: 'Khang Nguyen-Le',
+    year: '4th',
+  },
+  // ...
+];
+
+
+function isSeniorStudent(student) {
+  return student && student.year === '4th';
+}
+
+function getStudentName(student) {
+  return student && student.name;
+}
+
+function splitBySpace(str) {
+  return str && str.split(' ') || [];
+}
+
+function getFirstCharacter(str) {
+  return str && str[0] || '';
+}
+
+function getInitials(name) {
+  return splitBySpace(name).map(getFirstCharacter).join('');
+}
+
+function getSeniorStudentInitalsListName(studentList) {
+  return studentList.filter(isSeniorStudent)
+    .map(getStudentName)
+    .map(getInitials);
+}
+
+console.log(getSeniorStudentInitalsListName(students));
+
+```
+
+### Encapsulate conditionals
+
+```javascript
+
+// NOTE: dirty code
+
+const student = {
+    name: 'Khang Nguyen-Le',
+    year: 4,
+};
+
+if (student.year === 4) {
+  // do sth
+}
+
+```
+
+Do you know what the condition `student.year === 4` means? I guess not, so to help you out I will refactor the code like below:
+
+```javascript
+
+// NOTE: clean code
+
+const student = {
+    name: 'Khang Nguyen-Le',
+    year: 4,
+};
+
+function isSeniorStudent(student) {
+  return student && student.year === 4;
+}
+
+if (isSeniorStudent(student)) {
+  // do sth
 }
 
 ```
