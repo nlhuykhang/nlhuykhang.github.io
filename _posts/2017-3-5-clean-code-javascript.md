@@ -166,3 +166,39 @@ function getName(person) {
 }
 
 ```
+
+### Number of arguments should be less than 2
+
+```javascript
+
+// NOTE: dirty code
+
+function insertStudent(name, subjects, age, address, gpa) {
+  // do sth
+}
+
+insertStudent(/* pass 5 arguments here*/);
+
+```
+
+We'd better use an object containing all the needed arguments and pass to `insertStudnet`
+
+```javascript
+
+// NOTE: clean code
+
+const student = {
+  name: '...',
+  subjects: '...',
+  age: '...',
+  address: '...',
+  gpa: '...',
+};
+
+function insertStudent(student) {
+  // do sth
+}
+
+insertStudent(student);
+
+```
