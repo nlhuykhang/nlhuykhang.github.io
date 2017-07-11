@@ -3,7 +3,7 @@ layout: post
 title: NGINX Load Balancing Log
 categories: [load_balancing, logs]
 tags: [load_balancing, logs]
-published: false
+published: true
 fullview: true
 ---
 
