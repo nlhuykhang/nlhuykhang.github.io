@@ -8,10 +8,10 @@ fullview: true
 ---
 
 ## What?
-A(? or many) reverse proxy server sit in front of all application servers. (mostly) Responsible for directing request/response between client and server.
+A(or many?) reverse proxy server sit in front of all application servers. (mostly) Responsible for directing request/response between client and server.
 
 ## Why?
-To scale application horizontally
+To scale application horizontally, improve system availability (failover)
 
 ## Players?
 Nginx, HAproxy, ...
@@ -37,3 +37,13 @@ Store session data in db, retrieve by cookie token.
 Still not solve the problem with websocket, usually Redis is used in this case.
 
 ## Multiple load balancers?
+
+What if the load balancer dead or the traffic volume is too high? -> multiple load balancers
+
+#Load balancing between multiple load balancers?
+
+DNS load balancing: not efficient, no health check, no sticky session?
+
+What are other options?
+
+Are there any ways to avoid sticky session?
