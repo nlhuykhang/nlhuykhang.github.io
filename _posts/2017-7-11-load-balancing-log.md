@@ -40,9 +40,11 @@ Still not solve the problem with websocket, usually Redis is used in this case.
 
 What if the load balancer dead or the traffic volume is too high? -> multiple load balancers
 
-#Load balancing between multiple load balancers?
+# Load balancing between multiple load balancers?
 
 DNS load balancing: not efficient, no health check, no sticky session?
+
+AWS ELB: use ELB to load balancing between other load balancers (Nginx). Have support for sticky session. But why don't just use ELB and eliminate all other load balancers?
 
 What are other options?
 
