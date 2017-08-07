@@ -45,3 +45,31 @@ from vendors;
 
 select concat(rtrim(vend_name), ' ', vendor_country)
 from vendors;
+
+
+## group by
+
+select vend_id, count(*) as num_prods
+from products
+group by vend_id with rollup;
+
+select cust_id, count(*) as orders
+from orders
+group by cust_id
+having count(*) >= 2;
+
+select order_num, sum(quantity * item_price)
+from orderitems
+group by order_num
+having sum(quantity * item_price) >= 50;
+
+## join
+
+select vend_name, prod_name, prod_price
+from vendors inner join products on vendors.vend_id = products.vend_id;
+
+select customers.cust_id, orders.order_num
+from customers left outer join orders on customers.cust_id = orders.cust_id;
+
+select customers.cust_id, orders.order_num
+from customers right outer join orders on customers.cust_id = orders.cust_id;
