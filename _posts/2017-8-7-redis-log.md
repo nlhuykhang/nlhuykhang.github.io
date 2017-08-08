@@ -35,4 +35,12 @@ SUNION
 
 ### Sorted Set
 
-zadd
+ZADD
+
+### Hash Map
+
+HSET
+HGET
+HGETALL
+HINCRBY
+HDEL
