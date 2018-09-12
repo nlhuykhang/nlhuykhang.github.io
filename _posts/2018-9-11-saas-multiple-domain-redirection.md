@@ -19,3 +19,4 @@ fullview: true
 ### Links
 
 - https://codeascraft.com/2017/01/31/how-etsy-manages-https-and-ssl-certificates-for-custom-domains-on-pattern/
+- https://aws.amazon.com/blogs/aws/new-application-load-balancer-sni/
