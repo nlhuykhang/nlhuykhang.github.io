@@ -73,3 +73,15 @@ from customers left outer join orders on customers.cust_id = orders.cust_id;
 
 select customers.cust_id, orders.order_num
 from customers right outer join orders on customers.cust_id = orders.cust_id;
+
+
+
+## table size
+
+```
+SELECT
+    table_name AS `Table`,
+    round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`
+FROM information_schema.TABLES
+WHERE table_schema = "db_name" AND table_name = "table_name"
+```
