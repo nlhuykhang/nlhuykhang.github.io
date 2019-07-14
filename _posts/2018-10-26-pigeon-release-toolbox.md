@@ -23,3 +23,5 @@ Array.from(document.querySelectorAll(".issue-key")).reduce((acc, el) => {
 `git rev-list --pretty=format:"%h    %ad    %an    %s" v3.0.1...v4.0.0 | grep PHL-`
 
 `git merge-base master staging`
+
+`docker run --name myadmin -d -p 8080:80 -e PMA_HOST=192.168.1.10 -e PMA_USER=root -e PMA_PORT=3306  phpmyadmin/phpmyadmin`
