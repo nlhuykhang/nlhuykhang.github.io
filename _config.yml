@@ -34,3 +34,5 @@ url: http://nlhuykhang.github.io/
 excerpt_separator: <!--more-->
 
 BASE_PATH:
+
+theme: jekyll-theme-minimal
