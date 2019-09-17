@@ -1,7 +1,7 @@
 ### your site title here
 
 title: Place to put things
-baseurl: /nlhuykhang.github.io
+baseurl: /
 email: nlhuykhang@gmail.com
 
 
@@ -9,7 +9,7 @@ highlighter: rouge
 markdown: kramdown
 
 
-paginate: 4
+# paginate: 4
 
 
 #optimization
