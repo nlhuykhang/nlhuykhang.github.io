@@ -5,8 +5,8 @@ layout: default
 <div class="article-list">
   {% for post in paginator.posts %}
     <div class="article-block">
-        <a class="article-link" style="font-weight: bold; font-size: 1.5em;" href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
-        <span class="article-date" style="font-size: 0.6em;">{{post.date | date: '%B %d, %Y'}}</span>
+        <a class="article-link" href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+        <span class="article-date">{{post.date | date: '%B %d, %Y'}}</span>
     </div>
   {% endfor %}
 </div>

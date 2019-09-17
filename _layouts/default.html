@@ -13,13 +13,26 @@
 </head>
 
 <body style="background-color: rgb(6, 23, 37); color: #777;">
-  <script async src="{{site.baseurl}}/js/theme.min.js"></script>
-  <header>
-    <a href="{{site.baseurl}}/">
-      <div class="home"></div>
-    </a>
-  </header>
+  <!-- <script async src="{{site.baseurl}}/js/theme.min.js"></script> -->
+  <script type="text/javascript">
+      document.body.style.backgroundColor = 'rgb(6, 23, 37)';
+      document.body.style.color = '#777';
 
+      function theme() {
+          if (sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+              sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+              sessionStorage.setItem('cc', '#777');
+          } else if (sessionStorage.getItem('bg') == null || undefined) {
+              sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+              sessionStorage.setItem('cc', '#777');
+          } else if (sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
+              sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
+              sessionStorage.setItem('cc', '#333');
+          }
+          document.body.style.backgroundColor = sessionStorage.getItem('bg');
+          document.body.style.color = sessionStorage.getItem('cc');
+      }
+  </script>
   <main>
     <article>
       {{ content }}
@@ -33,7 +46,6 @@
       <a class="theme" onclick="theme()">Dark/Light</a>
     </div>
   </footer>
-  {% include analytics.html %}
 </body>
 
 </html>
