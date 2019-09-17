@@ -1,38 +1,37 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+### your site title here
 
-# paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
+title: Place to put things
+baseurl: /nlhuykhang.github.io
+email: nlhuykhang@gmail.com
+
+
 highlighter: rouge
 markdown: kramdown
 
 
-# defaults:
-#   -
-#     scope:
-#       path: "" # empty string for all files
-#     values:
-#       title: Khang Nguyen-Le
-#
-# description: Stylish Jekyll Theme
-# author:
-#   name: Khang H. Nguyen-Le
-#   email: nlhuykhang@gmail.com
-#   github: nlhuykhang
-#   twitter: nlhuykhang
-#   pinterest: nlhuykhang
-#   linkedin: nlhuykhang
-#   facebook: nlhuykhang
-#   bio: I'm Khang - coder, reader, learner - nice to see you here.
-#   email_md5: 726351295ec82e145928582f595aa3aa
-#
-# rss_path: feed.xml
-# categories_path: categories.html
-# tags_path: tags.html
-# # about_path: about.html
-# url: http://nlhuykhang.github.io/
-# excerpt_separator: <!--more-->
-#
-# BASE_PATH:
+paginate: 4
 
-theme: jekyll-theme-slate
+
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+
+sass:
+ style: compressed
+
+exclude:
+- README.md
+
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
