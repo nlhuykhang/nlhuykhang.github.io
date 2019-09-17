@@ -4,8 +4,10 @@ layout: default
 <h1 class="headline">{{site.title}}</h1>
 <div class="article-list">
   {% for post in paginator.posts %}
-    <a style="font-weight: bold; font-size: 1.5em;" href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
-    <span style="font-size: 0.6em;">{{post.date | date: '%B %d, %Y'}}</span>
+    <div>
+        <a style="font-weight: bold; font-size: 1.5em;" href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+        <span style="font-size: 0.6em;">{{post.date | date: '%B %d, %Y'}}</span>
+    </div>
   {% endfor %}
 </div>
 
