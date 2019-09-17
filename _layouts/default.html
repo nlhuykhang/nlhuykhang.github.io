@@ -5,50 +5,51 @@
 <html>
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
 
-{% seo %}
+    {% seo %}
 </head>
 
 <body style="background-color: rgb(6, 23, 37); color: #fff;">
-  <!-- <script async src="{{site.baseurl}}/js/theme.min.js"></script> -->
-  <script type="text/javascript">
-      document.body.style.backgroundColor = 'rgb(6, 23, 37)';
-      document.body.style.color = '#fff';
+    <!-- <script async src="{{site.baseurl}}/js/theme.min.js"></script> -->
+    <script type="text/javascript">
+        document.body.style.backgroundColor = 'rgb(6, 23, 37)';
+        document.body.style.color = '#fff';
 
-      function theme() {
-          if (sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
-              sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-              sessionStorage.setItem('cc', '#fff');
-          } else if (sessionStorage.getItem('bg') == null || undefined) {
-              sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-              sessionStorage.setItem('cc', '#fff');
-          } else if (sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
-              sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
-              sessionStorage.setItem('cc', '#333');
-          }
-          document.body.style.backgroundColor = sessionStorage.getItem('bg');
-          document.body.style.color = sessionStorage.getItem('cc');
-      }
-  </script>
-  <main>
-    <article>
-      {{ content }}
-    </article>
-  </main>
+        function theme() {
+            if (sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+                sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+                sessionStorage.setItem('cc', '#fff');
+            } else if (sessionStorage.getItem('bg') == null || undefined) {
+                sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+                sessionStorage.setItem('cc', '#fff');
+            } else if (sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
+                sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
+                sessionStorage.setItem('cc', '#333');
+            }
+            document.body.style.backgroundColor = sessionStorage.getItem('bg');
+            document.body.style.color = sessionStorage.getItem('cc');
+        }
+    </script>
+    <main>
+        <article>
+            {{ content }}
+        </article>
+    </main>
 
-  <footer>
-    <div class="links">
-      <a href="{{site.baseurl}}/about">Who? What?</a>
-      <a href="https://github.com/nlhuykhang">Github</a>
-      <a href="https://stackoverflow.com/users/2845061/kkkkkkk">Stackoverflow</a>
-      <a href="https://www.flickr.com/photos/163047625@N03/albums">Flickr</a>
-      <a href="mailto:someone@example.com?Subject=Hey%20k!">nlhuykhang@gmail.com</a>
-      <a class="theme" onclick="theme()">Dark/Light</a>
-    </div>
-  </footer>
+    <footer>
+        <div class="links">
+            <a href="{{site.baseurl}}">Root</a>
+            <a href="{{site.baseurl}}/about">Who? What?</a>
+            <a href="https://github.com/nlhuykhang">Github</a>
+            <a href="https://stackoverflow.com/users/2845061/kkkkkkk">Stackoverflow</a>
+            <a href="https://www.flickr.com/photos/163047625@N03/albums">Flickr</a>
+            <a href="mailto:someone@example.com?Subject=Hey%20k!">nlhuykhang@gmail.com</a>
+            <a class="theme" onclick="theme()">Dark/Light</a>
+        </div>
+    </footer>
 </body>
 
 </html>
