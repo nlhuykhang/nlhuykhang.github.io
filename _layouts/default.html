@@ -12,19 +12,19 @@
 {% seo %}
 </head>
 
-<body style="background-color: rgb(6, 23, 37); color: #777;">
+<body style="background-color: rgb(6, 23, 37); color: #fff;">
   <!-- <script async src="{{site.baseurl}}/js/theme.min.js"></script> -->
   <script type="text/javascript">
       document.body.style.backgroundColor = 'rgb(6, 23, 37)';
-      document.body.style.color = '#777';
+      document.body.style.color = '#fff';
 
       function theme() {
           if (sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
               sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-              sessionStorage.setItem('cc', '#777');
+              sessionStorage.setItem('cc', '#fff');
           } else if (sessionStorage.getItem('bg') == null || undefined) {
               sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-              sessionStorage.setItem('cc', '#777');
+              sessionStorage.setItem('cc', '#fff');
           } else if (sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
               sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
               sessionStorage.setItem('cc', '#333');
