@@ -3,7 +3,7 @@ layout: post
 title: Just Questions
 categories: [logs, questions]
 tags: [logs, questions]
-published: true
+published: false
 fullview: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: How complex systems fail
 categories: [logs, system-design, system, software]
 tags: [logs, system-design, system, software]
-published: false
+published: true
 fullview: true
 ---
 

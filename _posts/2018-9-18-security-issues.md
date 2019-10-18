@@ -3,7 +3,7 @@ layout: post
 title: Security issues
 categories: [logs, security]
 tags: [logs, security]
-published: true
+published: false
 fullview: true
 ---
 

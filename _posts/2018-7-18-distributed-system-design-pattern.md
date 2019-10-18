@@ -3,7 +3,7 @@ layout: post
 title: Distributed System Design Patterns
 categories: [logs, system-design]
 tags: [logs, system-design]
-published: true
+published: false
 fullview: true
 ---
 
