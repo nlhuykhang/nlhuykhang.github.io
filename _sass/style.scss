@@ -42,7 +42,7 @@ a {
 }
 
 p a {
-    color: $text-color;
+    // color: $text-color;
     text-decoration: none;
     background: -webkit-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
     background: -moz-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
