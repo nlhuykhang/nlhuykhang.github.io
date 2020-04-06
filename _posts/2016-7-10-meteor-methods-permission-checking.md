@@ -19,71 +19,74 @@ Although I have faced this problem a few times ago, it has never bothered me eno
 
 The method I use to refactor is pretty simple, and I think everyone is familiar with it, that is to make the function smaller by separate the code to small function. Take this methods as an example:
 
-    export const bloggingSunday = new ValidatedMethod({
-      // other property ...
-      run(data) {
+{% highlight javascript linenos %}
+export const bloggingSunday = new ValidatedMethod({
+  // other property ...
+  run(data) {
 
-        const userId = Meteor.userId();
+    const userId = Meteor.userId();
 
-        if (!userId) {
-          throw new Meteor.Error('not-authorized');
-        }
+    if (!userId) {
+      throw new Meteor.Error('not-authorized');
+    }
 
-        if (Roles.isUserInRoles(userId, 'admin')) {
-          throw new Meteor.Error('not-authorized');
-        }
+    if (Roles.isUserInRoles(userId, 'admin')) {
+      throw new Meteor.Error('not-authorized');
+    }
 
-        const team = Team.findOne(data.teamId);
+    const team = Team.findOne(data.teamId);
 
-        if (!team || !team.isUserInTeam(userId) || !team.isUserTeamManager(userId) ) {
-          throw new Meteor.Error('not-authorized');
-        }
+    if (!team || !team.isUserInTeam(userId) || !team.isUserTeamManager(userId) ) {
+      throw new Meteor.Error('not-authorized');
+    }
 
-        // logic code
-      },
-    });
+    // logic code
+  },
+});
+{% endhighlight %}
 
 As we can see the code for checking permission in the method above is pretty complex, though I already use some helpers to make the code simpler. This is just an example, in the real app I have to write much complicated logic for checking. So that to save myself a lot of time and headaches I separate all the permission checking code to small function and also utilize some of the ValidatedMethod's extension packages.
 
+{% highlight javascript linenos %}
+// checkIsUserInTeam.js
+export const checkIsUserInTeam = function(data) {
+  const team = Team.findOne(data.teamId);
 
-    // checkIsUserInTeam.js
-    export const checkIsUserInTeam = function(data) {
-      const team = Team.findOne(data.teamId);
+  if (!team || !team.isUserInTeam(userId)) {
+    throw new Meteor.Error('not-authorized');
+  }
+};
 
-      if (!team || !team.isUserInTeam(userId)) {
-        throw new Meteor.Error('not-authorized');
-      }
-    };
+// checkIsUserTeamManager.js
+export const checkIsUserTeamManager = function(data) {
+  const team = Team.findOne(data.teamId);
 
-    // checkIsUserTeamManager.js
-    export const checkIsUserTeamManager = function(data) {
-      const team = Team.findOne(data.teamId);
+  if (!team || !team.isUserTeamManager(userId) ) {
+    throw new Meteor.Error('not-authorized');
+  }
+};
 
-      if (!team || !team.isUserTeamManager(userId) ) {
-        throw new Meteor.Error('not-authorized');
-      }
-    };
-
-    // import dependency ...
-    export const bloggingSunday = new ValidatedMethod({
-      // other property ...
-      mixins: [LoggedInMixin, MethodHooks],
-      beforeHooks: [checkIsUserInTeam, checkIsUserTeamManager],
-      checkLoggedInError: {
-        error: 'not-authorized',
-        reason: 'Do not have permission',
-      },
-      checkRoles: {
-        roles: ['admin'],
-        rolesError: {
-          error: 'not-allowed',
-          reason: 'Do not have permission',
-        }
-      },
-      run(data) {
-        // logic code ...
-      },
-    });
+// import dependency ...
+export const bloggingSunday = new ValidatedMethod({
+  // other property ...
+  mixins: [LoggedInMixin, MethodHooks],
+  beforeHooks: [checkIsUserInTeam, checkIsUserTeamManager],
+  checkLoggedInError: {
+    error: 'not-authorized',
+    reason: 'Do not have permission',
+  },
+  checkRoles: {
+    roles: ['admin'],
+    rolesError: {
+      error: 'not-allowed',
+      reason: 'Do not have permission',
+    }
+  },
+  run(data) {
+    // logic code ...
+  },
+});
+{% endhighlight %}
 
 In the refactored version above, I do two main things: first I create two small functions for checking role of user in the team's scope, second I use LoggedInMixin and MethodHooks extension package of ValidatedMethod to do the real check.
 
