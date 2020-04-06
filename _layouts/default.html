@@ -8,15 +8,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
-
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     {% seo %}
 </head>
 
 <body style="background-color: rgb(6, 23, 37); color: #fff;">
-    <!-- <script async src="{{site.baseurl}}/js/theme.min.js"></script> -->
     <script type="text/javascript">
         document.body.style.backgroundColor = 'rgb(6, 23, 37)';
         document.body.style.color = '#fff';
+
+        sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+        sessionStorage.setItem('cc', '#fff');
 
         function theme() {
             if (sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
@@ -32,6 +36,8 @@
             document.body.style.backgroundColor = sessionStorage.getItem('bg');
             document.body.style.color = sessionStorage.getItem('cc');
         }
+
+        hljs.initHighlightingOnLoad();
     </script>
     <main>
         <article>
