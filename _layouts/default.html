@@ -16,13 +16,13 @@
     {% seo %}
 </head>
 
-<body style="background-color: rgb(6, 23, 37); color: #fff;">
+<body style="background-color: rgb(6, 23, 37); color: rgb(255, 255, 255, 0.8);">
     <script type="text/javascript">
 
         function theme() {
             if (sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
                 sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-                sessionStorage.setItem('cc', '#fff');
+                sessionStorage.setItem('cc', 'rgb(255, 255, 255, 0.8)');
             } else {
                 sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
                 sessionStorage.setItem('cc', '#333');
@@ -34,7 +34,7 @@
 
         if (!sessionStorage.getItem('bg')) {
             sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-            sessionStorage.setItem('cc', '#fff');
+            sessionStorage.setItem('cc', 'rgb(255, 255, 255, 0.8)');
         }
 
         document.body.style.backgroundColor = sessionStorage.getItem('bg');
