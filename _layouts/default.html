@@ -16,11 +16,8 @@
 
 <body style="background-color: rgb(6, 23, 37); color: #fff;">
     <script type="text/javascript">
-        document.body.style.backgroundColor = 'rgb(6, 23, 37)';
-        document.body.style.color = '#fff';
-
-        sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-        sessionStorage.setItem('cc', '#fff');
+        // document.body.style.backgroundColor = 'rgb(6, 23, 37)';
+        // document.body.style.color = '#fff';
 
         function theme() {
             if (sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
@@ -36,6 +33,8 @@
             document.body.style.backgroundColor = sessionStorage.getItem('bg');
             document.body.style.color = sessionStorage.getItem('cc');
         }
+
+        theme()
 
         hljs.initHighlightingOnLoad();
     </script>
