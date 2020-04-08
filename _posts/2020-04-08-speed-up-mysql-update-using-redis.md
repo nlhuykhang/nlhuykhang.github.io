@@ -39,7 +39,7 @@ One solution to this problem is that `vote_count` can be offloaded to another se
 
 With the addition of Redis, the system looks like this:
 
-![image1]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image1.png)
+[![image1]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image1.png)]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image1.png)
 
 So now whenever there is a new vote. The application server needs to do two things: first, it needs to insert the new vote into the database with `insert into vote(item_id) values(13);`, seconds it needs to increment the counter in Redis with `incr id_13`. This is surely much faster than inserting vote and updating counter in the database. So far so good? Well, not exactly?
 
@@ -47,11 +47,11 @@ The problem is Redis might not have the current counter value. For example, we m
 
 In order to solve this, the server has to check for the key existence in Redis before incrementing it. If the key is not there, Redis will notify the server without incrementing anything. The server in turn will grab the value from the database, increment, and persist it the Redis.
 
-![image2]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image2.png)
+[![image2]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image2.png)]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image2.png)
 
 One important thing needs to note in this new flow is that Redis checks for the counter existence the second time when it receives the new value from the server, and it only sets the value if key still does not exist. The second check is necessary to ensure the correctness of the value when there are multiple instances of the server. When many servers receive requests to insert votes at the same time and the counter does not exist in Redis, they will all go look up, increment the value from the database, then send to Redis. The problem is that all of them will get the same value from the database and increment it only once, so the new value they have is only greater than the current one by 1 which is wrong because they are multiple new votes:
 
-![image3]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image3.png)
+[![image3]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image3.png)]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image3.png)
 
 To solve this problem, Redis will simple check for the counter existence one more time and only set the value if it is not there. Otherwise, Redis will fall back to the normal behaviour which is to increment the counter.
 
@@ -61,7 +61,7 @@ At this point, our system is able to insert votes and increment the vote counter
 
 In order to do this, the system would need to set up some workers that will look up the values from Redis and save back the database. These workers can be the same application servers we already heave, or different servives required to set up seperately. That totally depends on the circumstances. However, regardless of their nature, they would need to do these things:
 
-![image4]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image4.png)
+[![image4]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image4.png)]({{ site.url }}/assets/media/2020-04-08-speed-up-mysql-update-using-redis/image4.png)
 
 This synchronization flow actually does more than simply saving counters to the database. It also deletes counters from Redis after saving. However, it is not a good idea to delete counters immediately after saving, as that forces application servers to look up counters from database more often when upvoting. That is the thing we want to improve in the first place. On the other hand, we do not want to leave counters in Redis permanently as that would occupy a lot of memory space and slow down synchronization when the number of counters is large enough.
 
